@@ -325,15 +325,15 @@ html { height: 100%;}
   html{font-size:19px;}
   .form-inline.jun{
   background-color:rgba( 100, 100, 255, 1);
-  width:75%; height:10%;
+  width:75%; height:40%;
   top:5%; left:10%;}}
 
 /*큰 화면*/
 @media (min-width:880px){
   html{font-size:24px;}
   .form-inline.jun{
-  background-color:rgba( 255, 100, 255, 1);
-  width:75%; height:15%;
+  background-color:rgba( 100, 0, 255, 1);
+  width:75%; height:40%;
   top:1%; left:10%;}}
 
 
@@ -343,5 +343,8 @@ html { height: 100%;}
     vertical-align: middle;
     content: " ";
     height: 100%;
+  }
+  .modal.modal-center.btn{
+    width: 100px;
   }
 }

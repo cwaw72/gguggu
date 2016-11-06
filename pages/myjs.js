@@ -26,3 +26,7 @@ $(document).ready(function () {
         $('#wrapper').toggleClass('toggled');
   });
 });
+
+
+$('#sandbox-container input').datepicker({
+});
