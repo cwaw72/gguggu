@@ -1,7 +1,7 @@
 var express = require('express');
 var session = require('express-session');
 var bodyParser = require('body-parser');
-var passport require('passport');
+var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var bkfd2Password = require("pbkdf2-password");
 var hasher = bkfd2Password();
@@ -35,7 +35,7 @@ app.use(passport.session());
 app.post('/auth/register',function(req,res){
   hasher( {password: req.body.password},function(err, pass, salt, hash){
     var user = {
-      authId: req.body.username,
+      authId: 'local:'+req.body.username,
       username: req.body.username,
       password: hash,
       salt:salt,
@@ -84,7 +84,7 @@ app.get('/auth/register',function(req,res){
 });
 
 passport.serializeUser(function(user, done) {
-  done(null, user.username);
+  done(null, user.authId);
 });
 
 passport.deserializeUser(function(id,done){
@@ -101,8 +101,8 @@ passport.deserializeUser(function(id,done){
 passport.use(new LocalStrategy(
   function(username, password, done){
 
-    var uname = req.body.username;
-    var pwd = req.body.password;
+    var uname = username;
+    var pwd = password;
 
     var sql= 'SELECT * FROM user WHERE authId=:authId';
     db.query(sql, {params: {authId:'local:'+uname}}).then(function(results){
