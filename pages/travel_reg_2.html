@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- fileinput-4.3.4   1e90ff-->
+      <link href="library/bootstrap-fileinput-4.3.5/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <!-- canvas-to-blob.min.js is only needed if you wish to resize images before upload.
+           This must be loaded before fileinput.min.js -->
+      <script src="library/bootstrap-fileinput-4.3.5/js/plugins/canvas-to-blob.min.js" type="text/javascript"></script>
+      <!-- sortable.min.js is only needed if you wish to sort / rearrange files in initial preview.
+           This must be loaded before fileinput.min.js -->
+      <script src="library/bootstrap-fileinput-4.3.5/js/plugins/sortable.min.js" type="text/javascript"></script>
+      <!-- purify.min.js is only needed if you wish to purify HTML content in your preview for HTML files.
+           This must be loaded before fileinput.min.js -->
+      <script src="library/bootstrap-fileinput-4.3.5/js/plugins/purify.min.js" type="text/javascript"></script>
+      <!-- the main fileinput plugin file -->
+      <script src="library/bootstrap-fileinput-4.3.5/js/fileinput.min.js"></script>
+      <!-- optionally if you need a theme like font awesome theme you can include
+          it as mentioned below -->
+      <script src="library/bootstrap-fileinput-4.3.5/themes/fa/theme.js"></script>
+      <!-- optionally if you need translation for your language then include
+          locale file as mentioned below -->
+      <script src="library/bootstrap-fileinput-4.3.5/js/locales/LANG.js"></script>
+        <!-- some CSS styling changes and overrides -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+        <style>
+        .kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover {
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            text-align: center;
+        }
+        .kv-avatar .file-input {
+            display: table-cell;
+            max-width: 220px;
+        }
+        </style>
+
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <!-- 상단 네비게이트 바 -->
+      <div class="navbar nav-tabs navbar-fixed-top" style="background-color:white; border-bottom:1px solid gray">
+            <div class="container">
+                <!-- 왼쪽 메뉴 버튼 -->
+                <div class="col-xs-3" style="background-color:white">
+                      <button type="button" class="hamburger is-closed" data-toggle="offcanvas" style="top:1%">
+                          <span class="hamb-top"></span>
+                          <span class="hamb-middle"></span>
+                          <span class="hamb-bottom"></span>
+                      </button>
+                </div>
+
+                <!-- 가문데 로고 -->
+                <div class="col-xs-6" style="background-color:white-space; text-align:center; display:inline-block;">
+                      <button type="button" class="btn btn-default btn-lg" style="margin-top:2px">
+                       트래블쉽
+                      </button>
+
+                </div>
+
+                <!-- 오른쪽 로그인, 회원가입-->
+                <div class="col-xs-3" style="background-color:white">
+                      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#LoginModal"style="margin-top:10px; float:right;">
+                      <span class="glyphicon glyphicon-user"> 로그인 </span>
+                      </button>
+                </div>
+
+
+            </div>
+      </div>
+      <!-- /상단 네비게이트 바 -->
+    </div>
+
+
+
+    <!-- 사이드 메뉴 -->
+    <div id="wrapper">
+    		<div class="overlay"></div>
+
+    		<!-- Sidebar -->
+				<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation" style="top:5%">
+						<ul class="nav sidebar-nav">
+								<li class="sidebar-brand">
+										<a href="#">
+											 Brand
+										</a>
+								</li>
+								<li>
+										<a href="#">요청 등록</a>
+								</li>
+								<li>
+										<a href="#">여행 등록</a>
+								</li>
+								<li>
+										<a href="#">요청 리스트</a>
+								</li>
+								<li>
+										<a href="#">여행자 리스트</a>
+								</li>
+								<!--<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">Dropdown heading</li>
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li><a href="#">Separated link</a></li>
+										<li><a href="#">One more separated link</a></li>
+									</ul>
+								</li>-->
+								<li>
+										<a href="#">이벤트</a>
+								</li>
+								<li>
+										<a href="#">플리마켓</a>
+								</li>
+								<li>
+										<a href="#">FAQ</a>
+								</li>
+						</ul>
+				</nav>
+    		<!-- /#sidebar-wrapper -->
+
+        <!--main context-->
+        <div style="background-color:rgba( 100, 100, 100, 0.2 ) ; padding-top:80px; padding-bottom:80px; padding-left: 30px; padding-right: 30px">
+
+          <div class="container" style="background-color:white; ">
+            <br>
+
+            <p class="header_jun">여행 정보 등록</p>
+
+              <div class="panel-heading info_reg" style="background-color:rgba(0, 191, 255, 1)">
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a href="#"> 한국 출발 </a></li>
+                    <li style="background-color:rgba(255, 255, 255, 1)"><a href="#"> 해외 출발 </a></li>
+                    <from class="pull-right" action="" style="margin-top:10px">
+                      <input type="radio" name="deli_method" value="왕복"> 왕복
+                      <input type="radio" name="deli_method" value="왕복"> 편도
+                      <input type="radio" name="deli_method" value="왕복"> 출/도착 다른구간
+                      <input type="radio" name="deli_method" value="왕복"> 다구간
+                    </form>
+                  </ul>
+
+              </div>
+
+            <p class="header_jun">조건 입력</p>
+            <p> 캐리어 혹은 배낭의 여유공강을 고려하여, 운송 가능한 조건을 입력하세요.</p>
+            <p> 배송가능 기간
+            <button type="button" class="btn btn-default" style="width:100px" > 다음 </button>
+            </p>
+
+
+
+            <p class="header_jun">배송 방식</p>
+
+
+
+            <!-- 버튼 -->
+            <div class="col-xs-12" style="margin-bottom:50px; text-align:center">
+              <button type="button" class="btn btn-default" style="margin-top:50px; width:100px" > 다음 </button>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+  </div>
+
+      <!--<script src="http://code.jquery.com/jquery.js"></script>
+      <!-- 사용자 정의 js -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="myjs.js"></script>
+
+      <!-- the fileinput plugin initialization -->
+      <script>
+      var btnCust = '<button type="button" class="btn btn-default" title="Add picture tags" ' +
+          'onclick="alert(\'Call your custom code here.\')">' +
+          '<i class="glyphicon glyphicon-tag"></i>' +
+          '</button>';
+      $("#avatar-2").fileinput({
+          overwriteInitial: true,
+          maxFileSize: 1500,
+          showClose: false,
+          showCaption: false,
+          showBrowse: false,
+          browseOnZoneClick: true,
+          removeLabel: '',
+          removeIcon: '<i class="glyphicon glyphicon-remove"></i>',
+          removeTitle: 'Cancel or reset changes',
+          elErrorContainer: '#kv-avatar-errors-2',
+          msgErrorClass: 'alert alert-block alert-danger',
+          defaultPreviewContent: '<img src="1.jpg" alt="Your Avatar" style="width:100%; height:200px"><h6 class="text-muted">Click to select</h6>',
+          layoutTemplates: {main2: '{preview} ' +  btnCust + ' {remove} {browse}'},
+          allowedFileExtensions: ["jpg", "png", "gif"]
+      });
+      </script>
+  </body>
+</html>
