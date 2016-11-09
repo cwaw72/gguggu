@@ -139,31 +139,80 @@
 
             <p class="header_jun">여행 정보 등록</p>
 
-              <div class="panel-heading info_reg" style="background-color:rgba(0, 191, 255, 1)">
-                  <ul class="nav nav-tabs">
-                    <li class="active"><a href="#"> 한국 출발 </a></li>
-                    <li style="background-color:rgba(255, 255, 255, 1)"><a href="#"> 해외 출발 </a></li>
-                    <from class="pull-right" action="" style="margin-top:10px">
-                      <input type="radio" name="deli_method" value="왕복"> 왕복
-                      <input type="radio" name="deli_method" value="왕복"> 편도
-                      <input type="radio" name="deli_method" value="왕복"> 출/도착 다른구간
-                      <input type="radio" name="deli_method" value="왕복"> 다구간
-                    </form>
-                  </ul>
+            <div class="panel-heading info_reg" style="background-color:rgba(0, 191, 255, 1); margin-top:30px">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#"> 한국 출발 </a></li>
+                  <li style="background-color:rgba(255, 255, 255, 1)"><a href="#"> 해외 출발 </a></li>
+                  <from class="pull-right" action="" style="margin-top:10px">
+                    <input type="radio" name="deli_method" value="왕복"> 왕복
+                    <input type="radio" name="deli_method" value="왕복"> 편도
+                    <input type="radio" name="deli_method" value="왕복"> 출/도착 다른구간
+                    <input type="radio" name="deli_method" value="왕복"> 다구간
+                  </form>
+                </ul>
+            </div>
 
-              </div>
+            <div class="top_reg_2" style="margin-top:50px; margin-bottom:50px">
+              <form action="demo_form.asp">
+                <input type="text" placeholder="인천/김포" name="start">
+                <input type="text" placeholder="도착도시" name="arrive">
+                <input type="submit" value="Submit">
+              </form>
+
+            </div>
+
+            <div class="top2_reg_2" style="margin-top:50px; margin-bottom:50px">
+
+              <input type="date" name="enddate" min="2016-10-31">
+
+              <from class="pull-right" action="">
+                <p style="font-size:1rem"> 이동목적
+                  <input type="radio" name="deli_method" value="여행"> 여행
+                  <input type="radio" name="deli_method" value="출장"> 출장
+                  <input type="radio" name="deli_method" value="기타"> 기타
+                  <input type="text" name="deli_method" value="다구간">
+                </p>
+              </form>
+            </div>
+
 
             <p class="header_jun">조건 입력</p>
             <p> 캐리어 혹은 배낭의 여유공강을 고려하여, 운송 가능한 조건을 입력하세요.</p>
             <p> 배송가능 기간
-            <button type="button" class="btn btn-default" style="width:100px" > 다음 </button>
+              <input type="date" name="enddate" min="2016-10-31">
+              <select>
+                <option value="volvo">배송무게</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+
+              <select>
+                <option value="volvo">물건크기</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
             </p>
 
 
 
             <p class="header_jun">배송 방식</p>
 
+            <p>직거래, 국내배송 등의 배송 가능한 방식을 선택하세요. (중복 선택 가능)</p>
+            <p>
+              <select>
+                <option value="volvo">직거래</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
 
+                <form action="demo_form.asp">
+                  <input type="text" placeholder="직거래 가능한 지역을 입력해 주세요." name="start">
+                </form>
+            </select>
+
+            </p>
 
             <!-- 버튼 -->
             <div class="col-xs-12" style="margin-bottom:50px; text-align:center">
