@@ -6,42 +6,19 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- fileinput-4.3.4   1e90ff-->
-      <link href="library/bootstrap-fileinput-4.3.5/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <!-- canvas-to-blob.min.js is only needed if you wish to resize images before upload.
-           This must be loaded before fileinput.min.js -->
-      <script src="library/bootstrap-fileinput-4.3.5/js/plugins/canvas-to-blob.min.js" type="text/javascript"></script>
-      <!-- sortable.min.js is only needed if you wish to sort / rearrange files in initial preview.
-           This must be loaded before fileinput.min.js -->
-      <script src="library/bootstrap-fileinput-4.3.5/js/plugins/sortable.min.js" type="text/javascript"></script>
-      <!-- purify.min.js is only needed if you wish to purify HTML content in your preview for HTML files.
-           This must be loaded before fileinput.min.js -->
-      <script src="library/bootstrap-fileinput-4.3.5/js/plugins/purify.min.js" type="text/javascript"></script>
-      <!-- the main fileinput plugin file -->
-      <script src="library/bootstrap-fileinput-4.3.5/js/fileinput.min.js"></script>
-      <!-- optionally if you need a theme like font awesome theme you can include
-          it as mentioned below -->
-      <script src="library/bootstrap-fileinput-4.3.5/themes/fa/theme.js"></script>
-      <!-- optionally if you need translation for your language then include
-          locale file as mentioned below -->
-      <script src="library/bootstrap-fileinput-4.3.5/js/locales/LANG.js"></script>
-        <!-- some CSS styling changes and overrides -->
+
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
       <link rel="stylesheet" type="text/css" href="mystyle.css">
 
-        <style>
-        .kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover {
-            margin: 0;
-            padding: 0;
-            border: none;
-            box-shadow: none;
-            text-align: center;
-        }
-        .kv-avatar .file-input {
-            display: table-cell;
-            max-width: 220px;
-        }
-        </style>
+      <!-- ... -->
+
+      <link rel="stylesheet" href="./bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
 
   </head>
 
@@ -132,133 +109,207 @@
     		<!-- /#sidebar-wrapper -->
 
         <!--main context-->
-        <div style="background-color:rgba( 100, 100, 100, 0.2 ) ; padding-top:80px; padding-bottom:80px; padding-left: 30px; padding-right: 30px">
+        <div class="reg_main">
 
           <div class="container" style="background-color:white; ">
             <br>
 
             <p class="header_jun">여행 정보 등록</p>
 
-            <div class="panel-heading info_reg" style="background-color:rgba(0, 191, 255, 1); margin-top:30px">
-                <ul class="nav nav-tabs">
-                  <li class="active"><a href="#"> 한국 출발 </a></li>
-                  <li style="background-color:rgba(255, 255, 255, 1)"><a href="#"> 해외 출발 </a></li>
-                  <from class="pull-right" action="" style="margin-top:10px">
-                    <input type="radio" name="deli_method" value="왕복"> 왕복
-                    <input type="radio" name="deli_method" value="왕복"> 편도
-                    <input type="radio" name="deli_method" value="왕복"> 출/도착 다른구간
-                    <input type="radio" name="deli_method" value="왕복"> 다구간
-                  </form>
+            <div class="row panel-heading info_reg" style="background-color:rgba(0, 191, 255, 1); margin:30px">
+                <ul class="nav nav-tabs" style="display:inline-block">
+                  <li id="aa" class="do_active" onclick="aaa()" ><a style="color:black" href="#"> 한국 출발 </a></li>
+                  <li id="bb" class="not_active" onclick="aaa()"><a style="color:black" href="#" > 해외 출발 </a></li>
                 </ul>
-            </div>
-
-            <div class="top_reg_2" style="margin-top:50px; margin-bottom:50px">
-              <form action="demo_form.asp">
-                <input type="text" placeholder="인천/김포" name="start">
-                <input type="text" placeholder="도착도시" name="arrive">
-                <input type="submit" value="Submit">
-              </form>
-
-            </div>
-
-            <div class="top2_reg_2" style="margin-top:50px; margin-bottom:50px">
-
-              <input type="date" name="enddate" min="2016-10-31">
-
-              <from class="pull-right" action="">
-                <p style="font-size:1rem"> 이동목적
-                  <input type="radio" name="deli_method" value="여행"> 여행
-                  <input type="radio" name="deli_method" value="출장"> 출장
-                  <input type="radio" name="deli_method" value="기타"> 기타
-                  <input type="text" name="deli_method" value="다구간">
-                </p>
-              </form>
-            </div>
-
-
-            <p class="header_jun">조건 입력</p>
-            <p> 캐리어 혹은 배낭의 여유공강을 고려하여, 운송 가능한 조건을 입력하세요.</p>
-            <p> 배송가능 기간
-              <input type="date" name="enddate" min="2016-10-31">
-              <select>
-                <option value="volvo">배송무게</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
-
-              <select>
-                <option value="volvo">물건크기</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
-            </p>
-
-
-
-            <p class="header_jun">배송 방식</p>
-
-            <p>직거래, 국내배송 등의 배송 가능한 방식을 선택하세요. (중복 선택 가능)</p>
-            <p>
-              <select>
-                <option value="volvo">직거래</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-
-                <form action="demo_form.asp">
-                  <input type="text" placeholder="직거래 가능한 지역을 입력해 주세요." name="start">
+                <from class="pull-right " action="" style=" height:100%">
+                  <div class="radio reg_label">
+                    <label style="font-weight: bold;"><input type="radio" name="deli_method" value="왕복"> 왕복 </label>
+                    <label><input type="radio" name="deli_method" value="왕복"> 편도 </label>
+                    <label><input type="radio" name="deli_method" value="왕복"> 출/도착 다른구간 </label>
+                    <label><input type="radio" name="deli_method" value="왕복"> 다구간 </label>
+                  </div>
                 </form>
-            </select>
+            </div>
 
-            </p>
+            <script>
+              var aa = document.getElementById("aa");
+              var bb = document.getElementById("bb");
 
+              function aaa(){
+
+                  if(aa.className=="do_active"){
+                    bb.className = "do_active";
+                    aa.className = "not_active";
+                  }
+                  else{
+                    bb.className = "not_active";
+                    aa.className = "do_active";
+                  }
+              }
+            </script>
+
+            <div class="row top_reg_2" style="margin:30px; margin-left:60px">
+              <form action="">
+                <input class="reg_input_text" type="text" placeholder="인천/김포" name="start" >
+                <input class="reg_input_text" type="text" placeholder="도착도시" name="arrive">
+              </form>
+            </div>
+
+            <div class="row reg_main_text">
+
+              <div class="col-xs-5" >
+                <input type="date" name="enddate" min="2016-10-31">
+              </div>
+              <div class="col-xs-7" >
+
+                <from class="" action="" >
+                    <div class="radio reg_label2">
+                      <label>여행 목적:</label>
+                      <label><input type="radio" name="deli_method" value="여행"> 여행 </label>
+                      <label><input type="radio" name="deli_method" value="출장"> 출장 </label>
+                      <label><input type="radio" name="deli_method" value="기타"> 기타 </label>
+                      <input type="text" name="deli_method" placeholder="직접입력">
+                    </div>
+                </form>
+
+              </div>
+            </div>
+
+
+            <p class="header_jun" style="margin-top:60px">조건 입력</p>
+            <div class="row reg_main_text">
+                <p style="font-size:0.8rem"> 캐리어 혹은 배낭의 여유공강을 고려하여, 운송 가능한 조건을 입력하세요.</p>
+                <p style="font-weight:bold; font-size:0.7rem">배송가능 기간</p>
+
+                <div class="row">
+                      <div class='col-md-5'>
+                          <div class="form-group">
+                              <div class='input-group date' id='datetimepicker6'>
+                                  <input type='text' class="form-control" />
+                                  <span class="input-group-addon">
+                                      <span class="glyphicon glyphicon-calendar"></span>
+                                  </span>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class='col-md-5'>
+                          <div class="form-group">
+                              <div class='input-group date' id='datetimepicker7'>
+                                  <input type='text' class="form-control" />
+                                  <span class="input-group-addon">
+                                      <span class="glyphicon glyphicon-calendar"></span>
+                                  </span>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+
+
+                <!-- 부트스트랩 select picker-->
+                <div class="row" style="margin-left:8px">
+
+
+                    <div class="col-xs-12 col-md-6">
+                      <label style="font-weight:bold; font-size:0.7rem">배송 무게 :
+
+                        <select class="selectpicker">
+                          <option value="volvo">배송무게</option>
+                          <option value="saab">0</option>
+                          <option value="opel">1</option>
+                          <option value="audi">2</option>
+                        </select>
+
+                      </label>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6">
+                      <label style="font-weight:bold; font-size:0.7rem">물건 크기:
+
+                        <select class="selectpicker">
+                          <option value="volvo">물건크기</option>
+                          <option value="saab">Saab</option>
+                          <option value="opel">Opel</option>
+                          <option value="audi">Audi</option>
+                        </select>
+
+                      </label>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <p class="header_jun" style="margin-top:60px">배송 방식</p>
+            <div class="row reg_main_text">
+
+              <p>직거래, 국내배송 등의 배송 가능한 방식을 선택하세요. (중복 선택 가능)</p>
+              <p>
+                <select class="selectpicker">
+                  <option value="volvo">직거래</option>
+                  <option value="saab">Saab</option>
+                  <option value="opel">Opel</option>
+                  <option value="audi">Audi</option>
+
+                  <input type="text" class="form-control" style="width:245px;display:inline-block; position:relative;" placeholder="직거래 가능한 지역을 입력해 주세요." name="start">
+              </select>
+
+              </p>
+
+            </div>
             <!-- 버튼 -->
-            <div class="col-xs-12" style="margin-bottom:50px; text-align:center">
+            <div class="container">
+                <div class="row">
+                    <div class='col-sm-6'>
+                        <div class="form-group">
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#datetimepicker1').datetimepicker();
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom:50px; text-align:center">
               <button type="button" class="btn btn-default" style="margin-top:50px; width:100px" > 다음 </button>
             </div>
           </div>
 
-
-
-
-
         </div>
-
-
-
-
 
   </div>
 
+      <script type="text/javascript">
+          $(function () {
+              $('#datetimepicker6').datetimepicker();
+              $('#datetimepicker7').datetimepicker({
+                  useCurrent: false //Important! See issue #1075
+              });
+              $("#datetimepicker6").on("dp.change", function (e) {
+                  $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+              });
+              $("#datetimepicker7").on("dp.change", function (e) {
+                  $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+              });
+          });
+      </script>
       <!--<script src="http://code.jquery.com/jquery.js"></script>
       <!-- 사용자 정의 js -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+
       <script type="text/javascript" src="myjs.js"></script>
 
-      <!-- the fileinput plugin initialization -->
-      <script>
-      var btnCust = '<button type="button" class="btn btn-default" title="Add picture tags" ' +
-          'onclick="alert(\'Call your custom code here.\')">' +
-          '<i class="glyphicon glyphicon-tag"></i>' +
-          '</button>';
-      $("#avatar-2").fileinput({
-          overwriteInitial: true,
-          maxFileSize: 1500,
-          showClose: false,
-          showCaption: false,
-          showBrowse: false,
-          browseOnZoneClick: true,
-          removeLabel: '',
-          removeIcon: '<i class="glyphicon glyphicon-remove"></i>',
-          removeTitle: 'Cancel or reset changes',
-          elErrorContainer: '#kv-avatar-errors-2',
-          msgErrorClass: 'alert alert-block alert-danger',
-          defaultPreviewContent: '<img src="1.jpg" alt="Your Avatar" style="width:100%; height:200px"><h6 class="text-muted">Click to select</h6>',
-          layoutTemplates: {main2: '{preview} ' +  btnCust + ' {remove} {browse}'},
-          allowedFileExtensions: ["jpg", "png", "gif"]
-      });
-      </script>
+      <script type="text/javascript" src="./bower_components/moment/min/moment.min.js"></script>
+      <script type="text/javascript" src="./bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
   </body>
 </html>
