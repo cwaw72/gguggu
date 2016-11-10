@@ -3,6 +3,7 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var FacebookStrategy = require('passport-facebook').Strategy;
 var bkfd2Password = require("pbkdf2-password");
 var hasher = bkfd2Password();
 var OrientoStore = require('connect-oriento')(session);
@@ -18,6 +19,7 @@ var db = server.use('o2');
 
 var app= express();
 
+
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(session({
@@ -31,6 +33,8 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(express.static('public'));
 
 app.post('/auth/register',function(req,res){
   hasher( {password: req.body.password},function(err, pass, salt, hash){
@@ -123,6 +127,46 @@ passport.use(new LocalStrategy(
   }
 ));
 
+passport.use(new FacebookStrategy({
+  clientID: '182603975513427',
+  clienctSecret:'414092b774886a3e9306845b3f1b892a',
+  callbackURL:"/auth/facebook/callback"
+  profileFields:['id','email','gender','link','locale','name'
+  , 'timezone', 'updated_time', 'verified', 'displayName']
+  },
+  function(accessToken, refreshToken, profile, done){
+    var authId = 'facebook:'+profile.id;
+    var sql = 'SELECT FROM user WHERE authId=:authId';
+
+    db.query(sql, {params:{authId:authId}}).then(function(results){
+      if(results.length ===0){
+        var newuser = {
+          'authId':authId,
+          'displayName':profile.displayName,
+          'email':profile.emails[0].value
+        };
+        var sql = 'INSERT INTO user (authId,displayName,email) VALUES(:authId, :displayName, :email';
+        db.query(sql, {params:newuser}).then(function(){
+          done(null,newuser);
+        }, function(error){
+          console.log(error);
+          done('Error');
+        })
+      }else{
+        return done(null,results[0]);
+      }
+    })
+  }
+  
+    
+));
+
+
+app.post('/test',function(req,res){
+  //res.send(req.body.test);
+  res.send('test.html',{aa:'tset'});
+});
+
 app.post('/auth/login', 
     passport.authenticate(
       'local', 
@@ -131,6 +175,25 @@ app.post('/auth/login',
         failureRedirect: '/auth/login',
         failureFlash: false
       }
+    )
+);
+
+app.get('/auth/facebook/callback',
+    passport.authenticate(
+      'facebook',
+      {
+        successRedirect:'/welcome',
+        failureRedirect:'/auth/login'
+      }
+   )
+);
+
+
+app.get('/auth/facebook',
+    passport.authenticate(
+
+      'facebook'
+      {scope:'email'}
     )
 );
 
@@ -148,6 +211,7 @@ app.get('/auth/login',function(req, res){
       <input type="submit">
     </p>
   </form>
+  <a href="/auth/facebook"> facebook</a>
   `;
   
 
@@ -165,18 +229,20 @@ app.get('/auth/logout', function(req, res){
 app.get('/welcome', function(req, res){
 
   if( req.user && req.user.displayName){
-    res.send(`
-      <h1> hello, ${req.user.displayName} </h1>
-      <a href="/auth/logout">logout</a>
-      `);
+    res.render('/pages/main.html');
+//    res.send(`
+//      <h1> hello, ${req.user.displayName} </h1>
+//      <a href="/auth/logout">logout</a>
+//      `);
   }else{
-    res.send(`
-      <h1>welcome</h1>
-      <ul>
-        <li><a href="/auth/login">login</a>
-        <li><a href="/auth/register">register</a>
-      </ul>
-      `);
+    res.send('/pages/main.html');
+//    res.send(`
+//      <h1>welcome</h1>
+//      <ul>
+//        <li><a href="/auth/login">login</a>
+//        <li><a href="/auth/register">register</a>
+//      </ul>
+//      `);
   }
 });
 
