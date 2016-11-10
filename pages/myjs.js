@@ -27,6 +27,5 @@ $(document).ready(function () {
   });
 });
 
-
 $('#sandbox-container input').datepicker({
 });
