@@ -117,18 +117,25 @@
             <p class="header_jun">여행 정보 등록</p>
 
             <div class="row panel-heading info_reg" style="background-color:rgba(0, 191, 255, 1); margin:30px">
-                <ul class="nav nav-tabs" style="display:inline-block">
-                  <li id="aa" class="do_active" onclick="aaa()" ><a style="color:black" href="#"> 한국 출발 </a></li>
-                  <li id="bb" class="not_active" onclick="aaa()"><a style="color:black" href="#" > 해외 출발 </a></li>
-                </ul>
-                <from class="pull-right " action="" style=" height:100%">
-                  <div class="radio reg_label">
-                    <label style="font-weight: bold;"><input type="radio" name="deli_method" value="왕복"> 왕복 </label>
-                    <label><input type="radio" name="deli_method" value="왕복"> 편도 </label>
-                    <label><input type="radio" name="deli_method" value="왕복"> 출/도착 다른구간 </label>
-                    <label><input type="radio" name="deli_method" value="왕복"> 다구간 </label>
-                  </div>
-                </form>
+
+              <div class="col-xs-12 col-md-8">
+
+                  <ul class="nav nav-tabs" style="display:inline-block">
+                    <li id="aa" class="do_active" onclick="aaa()" ><a style="color:black" href="#"> 한국 출발 </a></li>
+                    <li id="bb" class="not_active" onclick="aaa()"><a style="color:black" href="#" > 해외 출발 </a></li>
+                  </ul>
+
+              </div>
+
+                <div class="col-xs-12 col-md-4">
+
+                    <div class="radio reg_label">
+                      <label style="font-weight: bold;"><input type="radio" name="deli_method" value="왕복" checked="checked"> 편도 </label>
+                      <label><input type="radio" name="deli_method" value="왕복"> 왕복 </label>
+                      <label><input type="radio" name="deli_method" value="왕복"> 다구간 </label>
+                    </div>
+
+                </div>
             </div>
 
             <script>
@@ -150,7 +157,7 @@
 
             <div class="row top_reg_2" style="margin:30px; margin-left:60px">
               <form action="">
-                <input class="reg_input_text" type="text" placeholder="인천/김포" name="start" >
+                <input class="reg_input_text" type="text" placeholder="출발도시" name="start" >
                 <input class="reg_input_text" type="text" placeholder="도착도시" name="arrive">
               </form>
             </div>
@@ -158,7 +165,19 @@
             <div class="row reg_main_text">
 
               <div class="col-xs-5" >
-                <input type="date" name="enddate" min="2016-10-31">
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        <script type="text/javascript">
+                            $(function () {
+                                $('#datetimepicker1').datetimepicker();
+                            });
+                        </script>
               </div>
               <div class="col-xs-7" >
 
@@ -179,7 +198,7 @@
             <p class="header_jun" style="margin-top:60px">조건 입력</p>
             <div class="row reg_main_text">
                 <p style="font-size:0.8rem"> 캐리어 혹은 배낭의 여유공강을 고려하여, 운송 가능한 조건을 입력하세요.</p>
-                <p style="font-weight:bold; font-size:0.7rem">배송가능 기간</p>
+                <p style="font-weight:bold; font-size:0.7rem; margin-top:20px;">배송가능 기간</p>
 
                 <div class="row">
                       <div class='col-md-5'>
@@ -210,8 +229,8 @@
                 <div class="row" style="margin-left:8px">
 
 
-                    <div class="col-xs-12 col-md-6">
-                      <label style="font-weight:bold; font-size:0.7rem">배송 무게 :
+                    <div class="col-xs-12 col-md-4">
+                      <label style="font-weight:bold; font-size:0.7rem; margin-top:20px;">배송 무게 :
 
                         <select class="selectpicker">
                           <option value="volvo">배송무게</option>
@@ -224,7 +243,7 @@
                     </div>
 
                     <div class="col-xs-12 col-md-6">
-                      <label style="font-weight:bold; font-size:0.7rem">물건 크기:
+                      <label style="font-weight:bold; font-size:0.7rem; margin-top:20px;">물건 크기:
 
                         <select class="selectpicker">
                           <option value="volvo">물건크기</option>
@@ -259,26 +278,6 @@
 
             </div>
             <!-- 버튼 -->
-            <div class="container">
-                <div class="row">
-                    <div class='col-sm-6'>
-                        <div class="form-group">
-                            <div class='input-group date' id='datetimepicker1'>
-                                <input type='text' class="form-control" />
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <script type="text/javascript">
-                        $(function () {
-                            $('#datetimepicker1').datetimepicker();
-                        });
-                    </script>
-                </div>
-            </div>
-
             <div class="row" style="margin-bottom:50px; text-align:center">
               <button type="button" class="btn btn-default" style="margin-top:50px; width:100px" > 다음 </button>
             </div>
