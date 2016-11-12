@@ -9,15 +9,15 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
-
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+
       <link rel="stylesheet" type="text/css" href="mystyle.css">
 
-      <!-- ... -->
-
+      <!--datetimepicker-->
       <link rel="stylesheet" href="./bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
 
   </head>
@@ -116,13 +116,13 @@
 
             <p class="header_jun">여행 정보 등록</p>
 
-            <div class="row panel-heading info_reg" style="background-color:rgba(0, 191, 255, 1); margin:30px">
+            <div class="row panel-heading info_reg" style="border-radius:5px; background-color:rgba(45, 159, 255, 1); margin:30px">
 
               <div class="col-xs-12 col-md-8">
 
                   <ul class="nav nav-tabs" style="display:inline-block">
-                    <li id="aa" class="do_active" onclick="aaa()" ><a style="color:black" href="#"> 한국 출발 </a></li>
-                    <li id="bb" class="not_active" onclick="aaa()"><a style="color:black" href="#" > 해외 출발 </a></li>
+                    <li id="aa" class="do_active" onclick="aaa()" style="border-radius:5px; outline-style: none;"><a style="color:black" href="#"> 한국 출발 </a></li>
+                    <li id="bb" class="not_active" onclick="aaa()" style="border-radius:5px"><a style="color:black" href="#" > 해외 출발 </a></li>
                   </ul>
 
               </div>
@@ -130,81 +130,148 @@
                 <div class="col-xs-12 col-md-4">
 
                     <div class="radio reg_label">
-                      <label style="font-weight: bold;"><input type="radio" name="deli_method" value="왕복" checked="checked"> 편도 </label>
-                      <label><input type="radio" name="deli_method" value="왕복"> 왕복 </label>
+                      <label><input type="radio" name="deli_method" value="왕복" checked="checked" onclick="route_1()"> 편도 </label>
+                      <label><input type="radio" name="deli_method" value="왕복" onclick="route_2()"> 왕복 </label>
                       <label><input type="radio" name="deli_method" value="왕복"> 다구간 </label>
                     </div>
 
                 </div>
             </div>
 
-            <script>
-              var aa = document.getElementById("aa");
-              var bb = document.getElementById("bb");
 
-              function aaa(){
 
-                  if(aa.className=="do_active"){
-                    bb.className = "do_active";
-                    aa.className = "not_active";
-                  }
-                  else{
-                    bb.className = "not_active";
-                    aa.className = "do_active";
-                  }
-              }
-            </script>
 
-            <div class="row top_reg_2" style="margin:30px; margin-left:60px">
-              <form action="">
-                <input class="reg_input_text" type="text" placeholder="출발도시" name="start" >
-                <input class="reg_input_text" type="text" placeholder="도착도시" name="arrive">
-              </form>
+            <div class="row route_1" style="margin:15px; margin-bottom:0px">
+              <div class="header_jun_2"> 루트 1 </div>
+
+              <div class="col-xs-12 col-md-6" style="text-align:center; border-radius:5px;">
+                <div class="col-xs-12 col-md-6" style="text-align:center">
+                  <input class="form-control reg_input_text " style="width:100%; display:inline; position:relative" type="text" placeholder="출발 도시" name="start" >
+                </div>
+
+                <div class="col-xs-12 col-md-6">
+                    <div class="form-group" style="width:100%; display:inline-block; position:relative">
+                      <div class='input-group date' id='datetimepicker1'>
+                          <input type='text' class="form-control" placeholder="출발 날짜"/>
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker1').datetimepicker();
+                    });
+                </script>
+
+              </div>
+
+              <div class="col-xs-12 col-md-6" style="text-align:center">
+
+                <div class="col-xs-12 col-md-6" style="text-align:center">
+                  <input class="form-control reg_input_text " style="width:100%; display:inline; position:relative" type="text" placeholder="도착 도시" name="arrive" >
+                </div>
+
+                <div class="col-xs-12 col-md-6">
+                    <div class="form-group" style="width:100%; display:inline-block; position:relative">
+                      <div class='input-group date' id='datetimepicker2'>
+                          <input type='text' class="form-control" placeholder="도착 날짜"/>
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker2').datetimepicker();
+                    });
+                </script>
+
+              </div>
+
             </div>
 
-            <div class="row reg_main_text">
+            <div class="row route_2" id="route_2" style="margin:15px; display:none; margin-top:0px">
+              <div class="header_jun_2"> 루트 2 </div>
+              <div class="col-xs-12 col-md-6" style="text-align:center; border-radius:5px;">
 
-              <div class="col-xs-5" >
-                            <div class="form-group">
-                                <div class='input-group date' id='datetimepicker1'>
-                                    <input type='text' class="form-control" />
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                            </div>
-                        <script type="text/javascript">
-                            $(function () {
-                                $('#datetimepicker1').datetimepicker();
-                            });
-                        </script>
+                <div class="col-xs-12 col-md-6" style="text-align:center">
+                  <input class="form-control reg_input_text " style="width:100%; display:inline; position:relative" type="text" placeholder="출발 도시" name="start" >
+                </div>
+
+                <div class="col-xs-12 col-md-6">
+                    <div class="form-group" style="width:100%; display:inline-block; position:relative">
+                      <div class='input-group date' id='datetimepicker3'>
+                          <input type='text' class="form-control" placeholder="출발 날짜"/>
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker3').datetimepicker();
+                    });
+                </script>
+
               </div>
-              <div class="col-xs-7" >
 
+              <div class="col-xs-12 col-md-6" style="text-align:center">
+
+                <div class="col-xs-12 col-md-6" style="text-align:center">
+                  <input class="form-control reg_input_text " style="width:100%; display:inline; position:relative" type="text" placeholder="도착 도시" name="arrive" >
+                </div>
+
+                <div class="col-xs-12 col-md-6">
+                    <div class="form-group" style="width:100%; display:inline-block; position:relative">
+                      <div class='input-group date' id='datetimepicker4'>
+                          <input type='text' class="form-control" placeholder="도착 날짜"/>
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker4').datetimepicker();
+                    });
+                </script>
+
+              </div>
+
+            </div>
+
+            <div class="row reg_main_text" style="margin-left:25px">
                 <from class="" action="" >
                     <div class="radio reg_label2">
                       <label>여행 목적:</label>
                       <label><input type="radio" name="deli_method" value="여행"> 여행 </label>
                       <label><input type="radio" name="deli_method" value="출장"> 출장 </label>
                       <label><input type="radio" name="deli_method" value="기타"> 기타 </label>
-                      <input type="text" name="deli_method" placeholder="직접입력">
+                      <input id="etc_input" type="text" name="deli_method" placeholder="직접입력" class="form-control">
                     </div>
                 </form>
-
-              </div>
             </div>
 
 
             <p class="header_jun" style="margin-top:60px">조건 입력</p>
-            <div class="row reg_main_text">
-                <p style="font-size:0.8rem"> 캐리어 혹은 배낭의 여유공강을 고려하여, 운송 가능한 조건을 입력하세요.</p>
-                <p style="font-weight:bold; font-size:0.7rem; margin-top:20px;">배송가능 기간</p>
+            <div class="row reg_main_text ">
+                <p style="margin-bottom:40px; font-size:0.8rem"> 캐리어 혹은 배낭의 여유공강을 고려하여, 운송 가능한 조건을 입력하세요.</p>
+                <p class="header_jun_2" style="margin-left:0px" >배송가능 기간</p>
 
-                <div class="row">
+                <div class="row" style="margin-bottom:10px">
                       <div class='col-md-5'>
                           <div class="form-group">
                               <div class='input-group date' id='datetimepicker6'>
-                                  <input type='text' class="form-control" />
+                                  <input type='text' class="form-control" placeholder="배송가능 시작일"/>
                                   <span class="input-group-addon">
                                       <span class="glyphicon glyphicon-calendar"></span>
                                   </span>
@@ -215,7 +282,7 @@
                       <div class='col-md-5'>
                           <div class="form-group">
                               <div class='input-group date' id='datetimepicker7'>
-                                  <input type='text' class="form-control" />
+                                  <input type='text' class="form-control" placeholder="배송가능 마지막일"/>
                                   <span class="input-group-addon">
                                       <span class="glyphicon glyphicon-calendar"></span>
                                   </span>
@@ -226,11 +293,10 @@
 
 
                 <!-- 부트스트랩 select picker-->
-                <div class="row" style="margin-left:8px">
-
+                <div class="row">
 
                     <div class="col-xs-12 col-md-4">
-                      <label style="font-weight:bold; font-size:0.7rem; margin-top:20px;">배송 무게 :
+                      <label class="header_jun_2" style="font-weight:bold; font-size:15px; margin-top:10px; margin-left:5px">배송 무게 :
 
                         <select class="selectpicker">
                           <option value="volvo">배송무게</option>
@@ -242,8 +308,8 @@
                       </label>
                     </div>
 
-                    <div class="col-xs-12 col-md-6">
-                      <label style="font-weight:bold; font-size:0.7rem; margin-top:20px;">물건 크기:
+                    <div class="col-xs-12 col-md-4">
+                      <label  class="header_jun_2" style="font-weight:bold; font-size:15px; margin-top:10px; margin-top:10px; margin-left:5px">물건 크기 :
 
                         <select class="selectpicker">
                           <option value="volvo">물건크기</option>
@@ -263,13 +329,11 @@
             <p class="header_jun" style="margin-top:60px">배송 방식</p>
             <div class="row reg_main_text">
 
-              <p>직거래, 국내배송 등의 배송 가능한 방식을 선택하세요. (중복 선택 가능)</p>
+              <p style="font-size:0.8rem">직거래, 국내배송 등의 배송 가능한 방식을 선택하세요. (중복 선택 가능)</p>
               <p>
                 <select class="selectpicker">
                   <option value="volvo">직거래</option>
-                  <option value="saab">Saab</option>
-                  <option value="opel">Opel</option>
-                  <option value="audi">Audi</option>
+                  <option value="audi">배송</option>
 
                   <input type="text" class="form-control" style="width:245px;display:inline-block; position:relative;" placeholder="직거래 가능한 지역을 입력해 주세요." name="start">
               </select>
@@ -279,14 +343,40 @@
             </div>
             <!-- 버튼 -->
             <div class="row" style="margin-bottom:50px; text-align:center">
-              <button type="button" class="btn btn-default" style="margin-top:50px; width:100px" > 다음 </button>
+              <button type="button" class="btn btn_jun" style="margin-top:50px;" > 다음 </button>
             </div>
           </div>
 
         </div>
 
   </div>
+      <script>
+        var reg2_radio2 = document.getElementById("route_2");
 
+        function route_1(){
+          reg2_radio2.style.display="none";
+        }
+
+
+        function route_2(){
+          reg2_radio2.style.display="inline-block";
+        }
+
+        var aa = document.getElementById("aa");
+        var bb = document.getElementById("bb");
+
+        function aaa(){
+
+            if(aa.className=="do_active"){
+              bb.className = "do_active";
+              aa.className = "not_active";
+            }
+            else{
+              bb.className = "not_active";
+              aa.className = "do_active";
+            }
+        }
+      </script>
       <script type="text/javascript">
           $(function () {
               $('#datetimepicker6').datetimepicker();

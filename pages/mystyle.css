@@ -298,8 +298,8 @@ html { height: 100%;}
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(250,250,250,.8);
-    z-index: 1;
+    background-color: rgba(0,0,0, 0.65);
+    z-index: 999;
 }
 
 /*-------------------------------*/
@@ -317,11 +317,32 @@ html { height: 100%;}
 }
 
 .header_jun{
-  color:rgba(30, 144, 255, 1);
+  color:rgba(45, 159, 255, 1);
   margin-top:20px;
   margin-left:20px;
-  font-size:1rem;
+  font-size:25px;
   font-weight: bold;
+}
+
+.header_jun_2{
+  color:black;
+  margin-top:20px;
+  margin-bottom:8px;
+  margin-left:30px;
+  font-size:20px;
+  font-weight: bold;
+}
+
+.btn_jun{
+  border-radius:5px;
+  font-weight: bold;
+  color: white;
+  width:120px;
+  background-color:rgba(45, 159, 255,1);
+}
+
+.bottom_margin{
+  margin-bottom:20px;
 }
 
 /* 부트스트랩 select 크기 조절  */
@@ -330,6 +351,33 @@ html { height: 100%;}
 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
 }
 
+.main_search{
+  background-color:white;
+  border-radius:0px;
+  font-weight:bold;
+  position:relative;
+  text-align:center;
+  vertical-align:middle;
+  display:inline-block;
+  height:100%;
+
+}
+
+.main_current{
+  background-size:170px 170px;
+  width:170px; height:170px;
+  background-repeat:no-repeat;
+  position:relative; top:-20px;
+  display:inline-block;
+  padding-top:40px;
+  margin-right:17px;
+  margin-left:17px;
+  margin-bottom:15px;
+
+  font-size:20px;
+  font-weight: bold;
+  color: white;
+}
 
 .do_active {
    background-color:white;
@@ -353,6 +401,7 @@ html { height: 100%;}
 .reg_label2 label{
   color:black;
   font-weight: bold;
+  font-size: 18px;
   padding-right: 10px;
 }
 
@@ -369,15 +418,17 @@ html { height: 100%;}
   margin-left:50px
 }
 
-.reg_input_text{
-  width: 40%;  /* 원하는 너비 설정 */
+.reg_input_txt{
+  position: relative;
+  display: inline-block;
+  width: 50%  /* 원하는 너비 설정 */
   height: auto;  /* 높이값 초기화 */
   line-height : normal;  /* line-height 초기화 */
-  padding: .8em .5em; /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */
+  padding: .6em .12em; /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */
   font-family: inherit;  /* 폰트 상속 */
-  border: 0px solid #999;
+  border: 1px solid #999;
   border-bottom: 2px solid #000000;
-  border-radius: 1;  /* iSO 둥근모서리 제거 */
+  border-radius: 0;  /* iSO 둥근모서리 제거 */
   outline-style: none;  /* 포커스시 발생하는 효과 제거를 원한다면 */
   -webkit-appearance: none;  /* 브라우저별 기본 스타일링 제거 */
   -moz-appearance: none;
@@ -387,42 +438,128 @@ html { height: 100%;}
 
 
 
-@media (max-width:360px){html{font-size:10px;}}
-@media (min-width:361px) and (max-width:399px){html{font-size:11px;}}
-@media (min-width:400px) and (max-width:439px){html{font-size:12px;}}
-@media (min-width:440px) and (max-width:479px){html{font-size:13px;}.form-inline.jun{background-color:rgba( 255, 0, 255, 1);}}
-@media (min-width:480px) and (max-width:519px){html{font-size:14px;}.form-inline.jun{background-color:rgba( 100, 10, 255, 1);}}
-@media (min-width:520px) and (max-width:559px){html{font-size:15px;}}
-@media (min-width:560px) and (max-width:599px){html{font-size:16px;}.form-inline.jun{background-color:rgba( 255, 20, 255, 1);}}
-@media (min-width:600px) and (max-width:639px){html{font-size:17px;}}
-@media (min-width:640px) and (max-width:699px){html{font-size:18px;}.form-inline.jun{background-color:rgba( 255, 1, 1, 1);}}
+@media (max-width:399px){
+  html{font-size:12px;}
+  .main_search{
+    font-size:0.01px;
+  }
+  .form-inline.jun{
+    margin:15px ;
+    width:85%; height:45%;
+    top:0%; left:4%;}}
+
+
+@media (min-width:400px) and (max-width:439px){
+  html{font-size:13px;}
+  .main_search{
+    font-size:0.1px;
+  }
+  .form-inline.jun{
+    margin:15px ;
+    width:85%; height:45%;
+    top:0%; left:4%;}
+}
+
+@media (min-width:440px) and (max-width:479px){
+  html{font-size:15px;}
+  .main_search{
+    font-size:1px;
+  }
+  .form-inline.jun{
+    margin:15px ;
+    width:85%; height:45%;
+    top:0%; left:4%;}}
+
+@media (min-width:480px) and (max-width:519px){
+  html{font-size:16px;}
+  .main_search{
+    font-size:8px;
+  }
+  .form-inline.jun{
+    margin:15px ;
+    width:85%; height:45%;
+    top:0%; left:4%;}}
+
+@media (min-width:520px) and (max-width:559px){
+  html{font-size:17px;}
+  .main_search{
+    font-size:10px;
+  }
+  .form-inline.jun{
+    margin:15px ;
+    width:85%; height:45%;
+    top:5%; left:5%;}}
+
+@media (min-width:560px) and (max-width:599px){
+  html{font-size:18px;}
+    .main_search{
+      font-size:11px;
+    }
+    .form-inline.jun{
+      margin:15px ;
+      width:85%; height:45%;
+      top:5%; left:5%;}}
+
+@media (min-width:600px) and (max-width:699px){
+  html{font-size:19px;}
+  .main_search{
+    font-size:12px;
+  }
+  .form-inline.jun{
+    margin:15px ;
+    width:85%; height:45%;
+    top:8%; left:5%;}}
 
 @media (min-width:700px) and (max-width:879px){
-  html{font-size:19px;}
+  html{font-size:22px;}
   .form-inline.jun{
-  background-color:rgba( 100, 100, 255, 1);
-  width:75%; height:40%;
-  top:5%; left:10%;}}
+    margin:15px ;
+    width:85%; height:45%;
+    top:9%; left:7%;}}
 
 /*큰 화면*/
 @media (min-width:880px){
-  html{font-size:24px;}
+  .ad_p{
+    left:42%; top:5%
+  }
+  .carousel_top{
+    top:25%
+  }
+  .main_search{
+    font-size:18px;
+  }
+  html{font-size:28px;}
   .form-inline.jun{
-  background-color:rgba( 100, 0, 255, 1);
-  width:75%; height:40%;
-  top:1%; left:10%;}
+    margin:20px ;
+    width:85%; height:40%;
+    top:15%; left:6%;}
   .reg_input{
+    font-weight: bold;
     width:80%;
-  }}
+  }
+  #etc_input{
+    display:inline-block;
+    position:relative;
+    width:170px}}
 
   /*큰 화면 이하*/
 @media (max-width:879px){
+  .carousel_top{
+    top:15%
+  }
+
   #reg_info{
     margin-top:30px;}
   .reg_input{
+    font-weight: bold;
     width:80%;
-    margin-left: 10%;
-  }}
+    margin-left: 10%;}
+  #etc_input{
+    margin-top: 10px;
+    margin-left: 5%;
+    width:80%;
+
+}}
 
 
 @media screen and (min-width: 768px) {
@@ -436,3 +573,7 @@ html { height: 100%;}
     width: 100px;
   }
 }
+
+/* 메인 색 파랑 45, 159, 255
+   메인 색 노란 255, 186, 00
+  opacity*/

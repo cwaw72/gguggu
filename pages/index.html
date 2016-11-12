@@ -100,11 +100,11 @@
 
 
     <!-- 커다란 이미지 -->
-    <div class="container">
+    <div class="container" style="margin-top:30px">
       <br>
       <div id="myCarousel" class="carousel slide" data-ride="carousel" background-color="black;">
         <!-- Indicators -->
-        <ol class="carousel-indicators"style="top:50%; bottom:40%;">
+        <ol class="carousel-indicators"style="top:60%; bottom:40%;">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -118,7 +118,7 @@
             <img src="1.jpg" alt="Chania" width="*" height="*" style="background-color:rgba( 0, 0, 0, 0.5 );">
             <div class="carousel-caption" style="background-color:rgba( 0, 0, 0, 0.5 ); position:absolute; left:0; top:0%;width:100%; height:100%;">
 
-              <div class="text-center" style="top:20%">
+              <div class="text-center carousel_top">
                 <h1 style="text-align:center; font-size:2rem">여행자가 직접 전해 주니까!</h1>
                 <p style="font-size:0.7rem">배송비는 저렴하게! 배송기간은 빠르게!</p>
               </div>
@@ -129,7 +129,7 @@
             <img src="1.jpg" alt="Chania" width="*" height="*">
 						<div class="carousel-caption" style="background-color:rgba( 0, 0, 0, 0.5 ); position:absolute; left:0; top:0%;width:100%; height:100%;">
 
-							<div class="text-center" style="top:20%">
+							<div class="text-center carousel_top">
 								<h1 style="text-align:center; font-size:2rem">여행자가 직접 전해 주니까!</h1>
 								<p style="font-size:0.7rem">배송비는 저렴하게! 배송기간은 빠르게!</p>
 							</div>
@@ -140,7 +140,7 @@
             <img src="1.jpg" alt="Flower">
 						<div class="carousel-caption" style="background-color:rgba( 0, 0, 0, 0.5 ); position:absolute; left:0; top:0%;width:100%; height:100%;">
 
-              <div class="text-center" style="top:20%">
+              <div class="text-center carousel_top">
                 <h1 style="text-align:center; font-size:2rem">여행자가 직접 전해 주니까!</h1>
                 <p style="font-size:0.7rem">배송비는 저렴하게! 배송기간은 빠르게!</p>
               </div>
@@ -151,7 +151,7 @@
             <img src="1.jpg" alt="Flower" >
 						<div class="carousel-caption" style="background-color:rgba( 0, 0, 0, 0.5 ); position:absolute; left:0; top:0%;width:100%; height:100%;">
 
-              <div class="text-center" style="top:20%">
+              <div class="text-center carousel_top">
                 <h1 style="text-align:center; font-size:2rem">여행자가 직접 전해 주니까!</h1>
                 <p style="font-size:0.7rem">배송비는 저렴하게! 배송기간은 빠르게!</p>
               </div>
@@ -160,15 +160,14 @@
         </div>
 
         <!--검색창 만들꺼얌-->
-        <div class="container" style="text-align:center; background-color:rgba( 0, 0, 0, 0.5 ); position:absolute; left:0; width:100%; top:70%;  height:30%;">
+        <div class="container" style="font-size:0px;text-align:center; background-color:rgba( 0, 0, 0, 0.5 ); position:absolute; left:0; width:100%; top:70%;  height:30%;">
           <!--검색 창-->
-          <form class="form-inline jun" style="position:absolute; margin:30px ; text-align:center; vertical-align: middle; display:inline-block;">
+          <form class="form-inline jun" style="position:absolute; text-align:center; vertical-align: middle; display:inline-block;">
             <!--국가 선택-->
-            <li class="dropdown" style="text-align: center; display:inline-block; background-color:rgba( 255, 255, 255, 1); width:24%">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 전체 국가
-                <span class="caret"></span></a>
+            <li class="dropdown" style="positio:relative; display:inline-block; background-color:rgba( 255, 255, 255, 1); width:24%; height:100%">
+              <button type="button" class="btn btn-default main_search" class="dropdown-toggle" data-toggle="dropdown" style="width:100%; font-weight:none; font-size:5 "> 전체 국가 <span class="caret"></span></button>
                 <ul class="dropdown-menu">
-                  <li><a href=#>전체 국가</a></li>
+                  <li><a href=#>한국</a></li>
                   <li><a href=#>북미</a></li>
                   <li><a href=#>아시아</a></li>
                   <li><a href=#>유럽</a></li>
@@ -176,9 +175,8 @@
                 </ul>
             </li>
 
-            <li class="dropdown" style="text-align: center; display:inline-block; background-color:rgba( 255, 255, 255, 1); width:24%">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 만료일 선택
-                <span class="caret"></span></a>
+            <li class="dropdown" style="positio:relative; display:inline-block; background-color:rgba( 255, 255, 255, 1); width:24%; height:100%">
+              <button type="button" class="btn btn-default main_search" class="dropdown-toggle" data-toggle="dropdown" style="width:100%; "> 만료일 선택 <span class="caret"></span> </button>
                 <ul class="dropdown-menu">
                   <li><a href=#>7일 이내</a></li>
                   <li><a href=#>10일 이내</a></li>
@@ -188,11 +186,9 @@
             </li>
 
             <!--검색 form-->
-            <div class="form-group " style="height:100%; width:24%">
-              <input type="itemname" class="form-control" id="itemanme" placeholder="상품명" style="text-align: center;vertical-align: middle; display:inline-block; background-color:rgba( 255, 255, 255, 1);height:100%;">
-            </div>
+            <input type="itemname" class="form-control main_search" id="itemanme" placeholder="상품명" style="width:24%; ">
             <!--검색하기 버튼-->
-            <button type="button" class="btn btn-primary" style="text-align: center;vertical-align: middle; display:inline-block; height:100%; width:24%">구매요청 검색</button>
+            <button type="button" class="btn btn-default main_search" style="width:24%; background-color:rgba(45, 159, 255, 1); color:white">구매요청 검색</button>
           </form>
 
         </div>
@@ -209,37 +205,72 @@
     </div>
 
     <!-- 등록하기 창 -->
-    <div class="container-fluid" width="300" style="margin-top:40px">
-      <div class="col-xs-1">
+    <div class="container" width="300">
+
+      <div class="col-md-6 col-xs-12" style="margin-top:40px; background-color:white; text-align:center; display:inline-block;">
+        <img src="2.png" alt="tlavler register" width="25%" height="25%">
+        <p style="margin-top:20px ; font-weight: bold; font-size:0.9rem"> 구매자의 부탁을 들어주고, <br>
+          여행자금을 모으세요! </p>
+        <button type="button" class="btn btn-primary btn_jun" style="width:160px; height:38px" onclick="location.href='travel_reg.html'"> 여행자 등록 </button>
       </div>
 
-      <div class="col-xs-5" style="background-color:white; text-align:center; display:inline-block;">
-        <img src="2.png" alt="tlavler register" width="30%" height="30%">
-        <p style="margin-top:10px ; font-weight: bold; font-size:0.9rem"> 구매자의 부탁을 들어주고, </p>
-        <p style="font-weight: bold;  font-size:0.9rem;"> 여행자금을 모으세요! </p>
-        <button type="button" class="btn btn-primary" style="font-weight: bold" onclick="location.href='travel_reg.html'"> 여행자 등록 </button>
-      </div>
-
-      <div class="col-xs-5" style="background-color:white; text-align:center;">
-        <img src="3.png" alt="buyer register" width="30%" height="30%">
-        <p style="margin-top:10px; font-weight: bold;  font-size:0.9rem;"> 저렴한 가격에 원하는 물건을 </p>
-        <p style="font-weight: bold; font-size:0.9rem;"> 여행자에게 부탁하세요! </p>
-        <button type="button" class="btn btn-primary" style="font-weight: bold"> 구매요청 등록 </button>
-      </div>
-      <div class="col-xs-1">
+      <div class="col-md-6 col-xs-12" style="margin-top:40px; background-color:white; text-align:center;">
+        <img src="3.png" alt="buyer register" width="25%" height="25%">
+        <p style="margin-top:20px; font-weight: bold;  font-size:0.9rem;"> 저렴한 가격에 원하는 물건을<br>
+         여행자에게 부탁하세요! </p>
+        <button type="button" class="btn btn-primary btn_jun" style="width:160px; height:38px"> 구매요청 등록 </button>
       </div>
 
     </div>
 
-    <!--광고 창-->
-    <div class="container" style="margin-top:40px; position:relative;">
-      <img src="2.jpg" alt="광고란" width="100%" >
-      <div class="container" style="background-color:rgba( 255, 255, 255, 0.5 ); position:absolute; left:0; width:100%; top:30%;  height:50%;">
-      </div>
+    <!--이 달의 추천 상품-->
+    <div class="container" style="margin-top:40px; position:relative; text-align:center">
+       <br>
+        <div id="ad" class="carousel slide" data-ride="carousel">
+
+
+         <!-- Indicators -->
+         <ol class="carousel-indicators" style="display:none">
+           <li data-target="#ad" data-slide-to="0" class="active"></li>
+           <li data-target="#ad" data-slide-to="1"></li>
+           <li data-target="#ad" data-slide-to="2"></li>
+           <li data-target="#ad" data-slide-to="3"></li>
+         </ol>
+
+
+
+         <!-- Wrapper for slides -->
+         <div class="carousel-inner" role="listbox" >
+
+           <img src="./p/backg.png" alt="광고란" width="100%" style="position:absolute; left:0%; top:0%;" >
+
+           <div class="item active" style="height:100%" style="position:relative; margin-top:10%">
+             <img src="./p/r1.png" alt="1" width="15%" style="margin-top:10%; margin-bottom:4%; display:inline-block">
+             <img src="./p/r2.png" alt="2" width="15%" style="margin-top:10%; margin-bottom:4%; margin-left:10px; display:inline-block">
+             <img src="./p/r3.png" alt="3" width="15%" style="margin-top:10%; margin-bottom:4%; margin-left:10px; display:inline-block">
+             <img src="./p/r4.png" alt="4" width="15%" style="margin-top:10%; margin-bottom:4%; margin-left:10px; display:inline-block">
+           </div>
+
+           <div class="ad_p" style="position:absolute; font-size:0.8rem; font-weight:bold;">
+             <p> 이 달의 추천 상품 </p>
+             <button type="button" class="btn btn-primary btn_jun" style="width:100%;"> 월별 테마 상품 더 보러 가기 </button>
+           </div>
+         </div>
+
+         <!-- Left and right controls -->
+         <a class="left carousel-control" href="#ad" role="button" data-slide="prev">
+           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+           <span class="sr-only">Previous</span>
+         </a>
+         <a class="right carousel-control" href="#ad" role="button" data-slide="next">
+           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+           <span class="sr-only">Next</span>
+         </a>
+       </div>
     </div>
 
     <!-- 인기 요청 -->
-    <div class="container" style="text-align:center; background-color:rgba( 0, 0, 0, 0.1)" >
+    <div class="container" style="text-align:center; background-color:rgba( 0, 0, 0, 0.1); display:none" >
       <h1> Best 인기 요청 </h1>
       <button type="button" class="btn btn-primary" style="width:100px;font-weight: bold"> 북미 </button>
       <button type="button" class="btn btn-primary" style="width:100px;font-weight: bold"> 아시아 </button>
@@ -256,30 +287,90 @@
       </div>
     </div>
 
-    <!--이벤트 란-->
-    <div class="container" style="text-align:center; margin-top:30px; margin-bottom:30px">
-      <img src="2.jpg" alt="광고란" width="20%" height="300" >
-      <img src="2.jpg" alt="광고란" width="60%" height="300" style="margin-left:20px">
+    <!--이벤트 란 & 거래 진행 란-->
+    <div class="container" style="text-align:center; margin-top:30px; margin-bottom:30px; background-color:rgba(238, 238, 238, 1)">
+      <div class="row" style="margin-top:30px">
+        <div class="col-md-7" >
+          <img src="./p/c.png" alt="쿠폰지급" width="100%" style="position:relative" >
 
-    </div>
+          <button type="button" class="btn btn-primary btn_jun" style="position:relative; width:30%; top:-40px;"> 페이스북으로 초대하기 </button>
+          <button type="button" class="btn btn-primary btn_jun" style="position:relative; width:30%; top:-40px; background-color:rgba(255,186,0,1);"> 카카오톡으로 초대하기 </button>
+          <button type="button" class="btn btn-primary btn_jun" style="position:relative; width:30%; top:-40px;"> 이메일로 초대하기 </button>
 
-    <!--거래 진행 란-->
-    <div class="container" style="text-align:center; margin-top:30px; margin-bottom:30px">
-      <img src="2.jpg" alt="광고란" width="30%"  >
-      <img src="2.jpg" alt="광고란" width="30%"  >
-      <img src="2.jpg" alt="광고란" width="30%"  >
+          <div class="col-md-3 main_current"
+          style="background-image:url(./p/s1.png);"> 누적 <br> 구매 건수<br><p style="color:yellow">5,234건</p></div>
 
+          <div class="col-md-3 main_current"
+          style="background-image:url(./p/s2.png); "> 3일 이내 <br> 배송가능 여행자<br><p style="color:yellow">302명</p></div>
+
+          <div class="col-md-3 main_current"
+          style="background-image:url(./p/s3.png);"> 평균 <br> 배송 기간<br><p style="color:yellow">5.5일</p></div>
+
+        </div>
+
+        <div class="col-md-5" >
+          <img src="./p/e1.png" alt="여행자 등록" width="100%" style="position:relative" >
+        </div>
+      </div>
     </div>
 
     <!--회사 소개 란-->
-    <div class="container" style="text-align:center; margin-top:30px; margin-bottom:30px">
-      <h1> 회사 소개 란</h1>
+    <div class="container-fluid" style="color:white; text-align:left; padding-top:80px; padding-bottom:40px; background-color:rgba(45, 159, 255, 1);">
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-2" style="margin-bottom:15px">
+          <h4> COMPANY INFORMATION </h4>
+
+          <p>상호명: 윰비스 <br>
+             대표 : 황유미, 오승아 <br>
+             사업자 등록 번호 : 000-00-0000 <br>
+             통신 판매 신고 번호: <br>
+             주소 : 강남 <br>
+             이메일 주소 : GGu@naver.com <br>
+           </p>
+
+        </div>
+
+        <div class="col-md-2" style="margin-bottom:15px">
+          <h4> BANK ACCOUNT </h4>
+
+          <p>예금주: 윰비스 <br>
+             (하나) : 000000000000 <br>
+          </p>
+
+          <p> CUSTOMER SERVICE </p>
+
+          <p> 010 0000 0000 <br>
+              OPEN : MON-FRI AM11-PM5 <br>
+              CLOSE : NEVER <br>
+
+          </p>
+        </div>
+
+        <div class="col-md-2" style="margin-bottom:15px">
+          <h4> INFORMATION </h4>
+
+          <p> About us <br>
+              FAQ <br>
+              이용 방법 <br>
+              이용 약관 <br>
+              개인 보호 정책 <br>
+
+          </p>
+
+        </div>
+
+        <div class="col-md-2" style="">
+          <h4> STAY CONNECTED </h4>
+        </div>
+      </div>
     </div>
 
 
     <!--로그인 모달 팝업 -->
     <div class="modal modal-center fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-      <div class="modal-dialog modal-center" style="width:400px; height:600px">
+      <div class="modal-dialog modal-center" style="width:450px; height:600px">
         <div class="modal-content">
 <!--
           <div class="modal-header">
@@ -288,30 +379,36 @@
             <h4 class="modal-title" id="myModalLabel">Modal title</h4>
           </div>
 -->
-          <div class="modal-body">
-            <h3 style="text-align:center"> ㅇㅇㅇ 에 오신 것을 환영해요!</h3>
+          <div class="modal-body" style="text-align:center; margin-left:30px; margin-right:30px">
+            <div class="row">
+              <button type="button" class="btn btn-default pull-right" data-dismiss="modal">X</button>
+            </div>
+            <img src="2.jpg" alt="" width="30%" height="100px">
 
-            <p style="text-align:center"><br> ㅇㅇㅇ은 여행자들이 직접 전해주는 배송 플랫폼으로 </p>
-            <p style="text-align:center">  여행자들을 위한 좋은 서비스가 되고자 합니다. </p>
+            <p style="text-align:center; font-weight:bold"><br> 여행의 직구는 여행자들이 직접 전해주는 배송 플랫폼입니다.
+            <br>
+            지금 가입하고 여행의 직구를 시작해보세요!</p>
             <br>
 
-            <input type="email" placeholder="이메일" class="form-control" id="email" size="10"></input>
-            <br>
-            <input type="password" placeholder="비밀번호" class="form-control" id="pwd" size="4"></input>
+            <input type="email" placeholder="이메일" style="font-weight:bold; margin-bottom:10px" class="form-control" id="email"></input>
+            <input type="password" placeholder="비밀번호" style="font-weight:bold" class="form-control" id="pwd"></input>
 
 
-            <div class="checkbox">
+            <div class="checkbox pull-left" >
               <label><input type="checkbox" value="">로그인 유지</label>
             </div>
 
-            <a> 비밀번호 찾기! </a>
 
-            <button type="button" class="btn btn-default" style="margin-top:20px; width:100%">이메일 로그인</button>
-            <button type="button" class="btn btn-default" style="margin-top:20px; width:100%">페이스북 로그인</button>
+            <button type="button" class="btn btn-default btn_jun" style="border-radius:5px; width:100%; font-weight:bold ">이메일 로그인</button>
+            <button type="button" class="btn btn-default" style="border-radius:5px; font-weight:bold; margin-top:10px; margin-bottom:10px; width:100%">페이스북 로그인</button>
+            <br>
 
+            <a class="pull-left"> 비밀번호를 잊으셨다면? </a>
+
+            <br>
           </div>
 
-          <div class="modal-footer">
+          <div class="modal-footer" style="text-align:left">
             <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#reModal"style="margin-top:10px; float:right;">
             <span class="glyphicon glyphicon-user"> 회원가입 </span>
             </button>
@@ -326,7 +423,7 @@
 
     <!--회원가입 팝업 -->
     <div class="modal modal-center fade" id="reModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-      <div class="modal-dialog modal-center" style="width:400px; height:600px">
+      <div class="modal-dialog modal-center" style="width:450px; height:600px">
         <div class="modal-content">
 <!--
           <div class="modal-header">
@@ -335,26 +432,26 @@
             <h4 class="modal-title" id="myModalLabel">Modal title</h4>
           </div>
 -->
-          <div class="modal-body">
-            <h3 style="text-align:center"> ㅇㅇㅇ 에 오신 것을 환영해요!</h3>
+          <div class="modal-body" style="text-align:center; margin-left:30px; margin-right:30px">
+            <div class="row">
+              <button type="button" class="btn btn-default pull-right" data-dismiss="modal">X</button>
+            </div>
+            <img src="2.jpg" alt="" width="30%" height="100px">
 
-            <p style="text-align:center"><br> ㅇㅇㅇ은 여행자들이 직접 전해주는 배송 플랫폼으로 </p>
-            <p style="text-align:center">  여행자들을 위한 좋은 서비스가 되고자 합니다. </p>
+            <p style="text-align:center; font-weight:bold"><br> 여행자가 전달하고 쉽고 빠른 해외 직구!
             <br>
-
-            <input name="username" type="email" placeholder="이메일" class="form-control" id="re_email" size="10"></input>
-            <br>
-            <input name="password" type="password" placeholder="비밀번호" class="form-control" id="re_pwd" size="4"></input>
-            <br>
-            <input type="name" placeholder="닉네임" class="form-control" id="re_nickname" size="4"></input>
-            <br>            <p> 휴대폰 인증 란 </p>
-            <input placeholder="휴대폰 인증 번호" class="form-control" id="re_pnum" maxlength="6"></input>
+            지금 가입하고 여행의 직구를 시작해보세요!</p>
             <br>
 
+            <input name="username" type="email" placeholder="이메일" class="form-control" id="re_email" style="margin-bottom:10px"></input>
+            <input name="password" type="password" placeholder="비밀번호" class="form-control" id="re_pwd" style="margin-bottom:10px"></input>
+            <input type="name" placeholder="닉네임" class="form-control" id="re_nickname" style="margin-bottom:10px"></input>
+            <p class="pull-left" style="font-weight:bold"> 휴대폰 인증 란 </p>
+            <input placeholder="휴대폰 인증 번호" class="form-control" id="re_pnum" maxlength="11"></input>
           </div>
 
-          <div class="modal-footer" style="margin:0px">
-            <button type="button" class="btn btn-default" style="width:100%">이메일 회원가입</button>
+          <div class="modal-footer" style="margin:0px; text-align:center">
+            <button type="button" class="btn btn-default btn_jun" style="width:90%; left:0%">이메일 회원가입</button>
           </div>
 
         </div>
