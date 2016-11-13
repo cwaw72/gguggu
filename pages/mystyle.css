@@ -518,7 +518,7 @@ html { height: 100%;}
     top:9%; left:7%;}}
 
 /*큰 화면*/
-@media (min-width:880px){
+@media (min-width:768px){
   .ad_p{
     left:42%; top:5%
   }
@@ -543,7 +543,7 @@ html { height: 100%;}
     width:170px}}
 
   /*큰 화면 이하*/
-@media (max-width:879px){
+@media (max-width:767px){
   .carousel_top{
     top:15%
   }
@@ -576,4 +576,5 @@ html { height: 100%;}
 
 /* 메인 색 파랑 45, 159, 255
    메인 색 노란 255, 186, 00
+   cccccc    204, 204, 204
   opacity*/

@@ -98,10 +98,10 @@
 										<a href="#">요청 등록</a>
 								</li>
 								<li>
-										<a href="">여행 등록</a>
+										<a href="./travel_reg.html">여행 등록</a>
 								</li>
 								<li>
-										<a href="#">요청 리스트</a>
+										<a href="./travel_list.html">요청 리스트</a>
 								</li>
 								<li>
 										<a href="#">여행자 리스트</a>
@@ -124,17 +124,17 @@
 
           <div class="container" style="background-color:white; ">
             <br>
-            <p style="text-align:center; font-size:2rem; font-weight:bold; color:rgba(45, 159, 255, 1);"> 여행자 등록 </p>
-            <p style="text-align:center; font-size:1rem"> 여정을 등록하고 경비를 벌어 보세요! </p>
+            <p style="text-align:center; font-size:2rem; font-weight:bold; color:rgba(45, 159, 255, 1);"> 구매요청 등록 </p>
+            <p style="text-align:center; font-size:1rem"> 여행자에게 부탁할 물품을 등록하고 저렴하게 겟하세요!</p>
 
-            <p class="header_jun">기본 정보 입력</p>
+            <p class="header_jun">1. 상품 정보 입력</p>
 
             <div class=row>
               <!-- 이미지 등록 & 기본 정보 입력 란 -->
 
                   <div class="col-xs-12 col-sm-4" id="reg_picture" style="text-align:center">
                     <!-- the avatar markup -->
-                    <form class="text-center" action="/avatar_upload.php" method="post" enctype="multipart/form-data" style="position:relative; margin-top:30px" >
+                    <form class="text-center" action="/avatar_upload.php" method="post" enctype="multipart/form-data" style="position:relative; margin-top:15px" >
                     <div id="kv-avatar-errors-2" class="center-block text-center" style="width:200px;display:none;"></div>
                         <div class="kv-avatar center-block" style="width:210px">
                             <input id="avatar-2" name="avatar-2" type="file" class="file-loading">
@@ -146,26 +146,31 @@
 
                   <div class="col-xs-12 col-sm-8" id="reg_info" style="">
 
-                    <p class="reg_input"> 이름 </p>
-                    <input type="name" placeholder="이름" class="form-control reg_input" id="email"></input>
+                    <p class="reg_input"> 상품명 </p>
+                    <input type="name" placeholder="상품명" class="form-control reg_input" id="email"></input>
                     <br>
 
-                    <p class="reg_input"> 연락처 </p>
-                    <input type="phone" placeholder="휴대폰" class="form-control reg_input" id="email"></input>
+                    <p class="reg_input"> 상품 개수 선택 </p>
+                    <input type="phone" placeholder="상품 개수 선택" class="form-control reg_input" id="email"></input>
                     <br>
 
-                    <p class="reg_input"> 소속 (선택사항)</p>
+                    <p class="reg_input"> 상품 요철할 지역 선택하기 </p>
                     <input type="text" placeholder="소속" class="form-control reg_input" id=""></input>
-                    <br>
-
-                    <p class="reg_input"> 소개 </p>
-                    <textarea placeholder="소개" class="form-control reg_input" id=""></textarea>
                     <br>
 
                   </div>
 
             </div>
+
+                  <div class="row" style="padding:50px">
+                    <p class="reg_input"> 기타요청 사항 </p>
+                    <textarea placeholder="소개" class="form-control reg_input" id=""></textarea>
+                    <br>
+                  </div>
+
+
                   <div class="row">
+
 
                   <p class="header_jun"> 본인 인증 </p>
 
