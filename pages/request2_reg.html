@@ -128,92 +128,57 @@
             <p style="text-align:center; font-size:1rem"> 여행자에게 부탁할 물품을 등록하고 저렴하게 겟하세요!</p>
 
 
-            <!-- 현재 상황 이미지 -->
-            <div class="row">
-              <div class="col-xs-3" style="color:white; font-size:20px; font-weight:bold; background-color:rgba(0, 174, 239, 1); height:190px; width:190px; border-radius:100px; text-align:center; vertical-align:middle; padding-top:45px ">
-                STEP 1<br>
-                상품 내용<br>
-                입력하기
+
+            <p class="header_jun" style="font-size:1rem;"> 4. 여행자 선택하기</p>
+            <p class="reg_input" style="font-size:0.8rem; padding:10px; margin-left:5%"> 요청 사항에 매칭되는 여행자는 총 6명 입니다.<br>
+            요청하실 여행지를 선택해주세요.</p>
+            <div class="row request2_img_background" style="background-color:rgba(204, 204, 204, 1); text-align:center;">
+
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                <img class="request2_img" src="./p/best.png" alt="사람얼굴" style="" >
               </div>
-            </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                <img class="request2_img" src="./p/best.png" alt="사람얼굴" style="" >
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                <img class="request2_img" src="./p/best.png" alt="사람얼굴" style="" >
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                <img class="request2_img" src="./p/best.png" alt="사람얼굴" style="" >
+              </div>
 
-            <p class="header_jun">1. 상품 정보 입력</p>
-
-            <div class=row>
-              <!-- 이미지 등록 & 기본 정보 입력 란 -->
-
-                  <div class="col-xs-12 col-sm-4" id="reg_picture" style="text-align:center">
-                    <!-- the avatar markup -->
-                    <form class="text-center" action="/avatar_upload.php" method="post" enctype="multipart/form-data" style="position:relative; margin-top:30px" >
-                    <div id="kv-avatar-errors-2" class="center-block text-center" style="width:200px;display:none;"></div>
-                        <div class="kv-avatar center-block" style="width:210px">
-                            <input id="avatar-2" name="avatar-2" type="file" class="file-loading">
-                        </div>
-                        <!-- include other inputs if needed and include a form submit (save) button -->
-                    </form>
-                    <!-- your server code `avatar_upload.php` will receive `$_FILES['avatar']` on form submission -->
-                  </div>
-
-                  <div class="col-xs-12 col-sm-8" id="reg_info" style="">
-
-                    <p class="reg_input"> 상품명 </p>
-                    <input type="name" placeholder="상품명" class="form-control reg_input" id="email"></input>
-                    <br>
-
-                    <p class="reg_input"> 링크걸기 </p>
-                    <input type="name" placeholder="여행자가 참고할 물품 링크를 입력해주세요." class="form-control reg_input" id=""></input>
-                    <br>
-
-
-                    <p class="reg_input"> 상품 개수 선택 </p>
-                    <input type="phone" placeholder="상품 개수 선택" class="form-control reg_input" id="email"></input>
-                    <br>
-
-                    <p class="reg_input"> 상품 요철할 지역 선택하기 </p>
-                    <input type="text" placeholder="소속" class="form-control reg_input" id=""></input>
-                    <br>
-
-                  </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                <img class="request2_img" src="./p/best.png" alt="사람얼굴" style="" >
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                <img class="request2_img" src="./p/best.png" alt="사람얼굴" style="" >
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                <img class="request2_img" src="./p/best.png" alt="사람얼굴" style="" >
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                <img class="request2_img" src="./p/best.png" alt="사람얼굴" style="" >
+              </div>
 
             </div>
 
-                    <p class="reg_input" style="margin-left: 10%;"> 기타요청 사항 </p>
-                    <textarea placeholder="소개" class="form-control reg_input" id="" style="margin-left: 10%; width:80%; height:150px"></textarea>
-                    <br>
+            <!-- 현재 상황 이미지 -->
+            <div class="row" style="font-weight:bold; text-align:center; margin-top:20px; margin-bottom:20px">
+                <p style="font-size:0.8rem;"> 잠깐! 마음에 드는 여행자가 없으신가요? <br>
+                  구매요청 리스트에 올려, 더 많은 여행자들의 지원을 받아보세요.</p>
 
-                  <div class="row">
-
-
-                  <p class="header_jun"> 2. 만료일 설정</p>
-
-                    <!-- 본인 인증란 -->
-                    <div class="">
-                      <p class="reg_input" style="padding:10px; margin-left:10%"> 요청한 물품을 수령받고 싶은 기간을 설정해주세요.<br>
-                      (국내 택배 사정에 따라 1~2일간 차이가 날 수 있습니다.)</p>
-                    </div>
-
-                  </div>
-
-                  <div class="row">
-
-                  <p class="header_jun"> 3. 가격 제시</p>
-
-                    <!-- 본인 인증란 -->
-                      <p class="reg_input" style="padding:10px; margin-left:10%"> 여행자의 수고비를 포함한 물품 전체 가격을 적어주세요.</p>
-                      <input type="text" placeholder="가격" class="form-control reg_input" id="" style="padding:10px; margin-left:10%; width:80%"></input>
+                  <button type="button" class="btn btn-default" style="font-size:0.8rem; border-radius:5px; height:40px; width:80%; font-weight:bold; background-color:rgba(255, 186, 0, 1); color:white">
+                구매요청 리스트에 올리기</button>
+            </div>
 
 
-                  </div>
 
-                  <!-- 버튼 -->
-                  <div class="col-xs-12" style="margin-bottom:50px; text-align:center">
-                    <button type="button" class="btn btn_jun" style="margin-top:50px;" onclick="location.href='request2_reg.html'"> 다음 </button>
-                  </div>
+            <!-- 버튼 -->
+            <div class="col-xs-12" style="margin-bottom:50px; text-align:center">
+              <button type="button" class="btn btn_jun" style="margin-top:50px;" onclick="location.href='request2_reg.html'"> 다음 </button>
+            </div>
+
           </div>
-
-
-
-
 
         </div>
 
