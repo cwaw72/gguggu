@@ -5,7 +5,9 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="mystyle.css">
+      <link rel="stylesheet" type="text/css" href="./css/mystyle.css">
+      <link rel="stylesheet" type="text/css" href="./css/login_form.css">
+      <link rel="stylesheet" type="text/css" href="./css/menu_side.css">
 
       <!-- fileinput-4.3.4   1e90ff-->
       <link href="library/bootstrap-fileinput-4.3.5/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
@@ -28,6 +30,8 @@
           locale file as mentioned below -->
       <script src="library/bootstrap-fileinput-4.3.5/js/locales/LANG.js"></script>
         <!-- some CSS styling changes and overrides -->
+      <link rel="stylesheet" href="./bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+
         <style>
         .kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover {
             margin: 0;
@@ -45,6 +49,102 @@
   </head>
 
   <body>
+
+    <!--메뉴 창-->
+    <div id="menu-sidebar-wrapper">
+      <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"></a>
+      <div style="margin-top:80px;"></div>
+      <ul class="menu-sidebar-nav" style="margin-top:80px;">
+        <!--<li class="menu-sidebar-brand">
+          <a href="#">Project name</a>
+        </li>-->
+        <li>
+          <a href="./request_reg.html">요청 등록</a>
+        </li>
+        <li>
+          <a href="./travel_reg.html">여행 등록</a>
+        </li>
+        <li>
+          <a href="travel_list.html">요청 리스트</a>
+        </li>
+        <li>
+          <a href="#contact">이벤트</a>
+        </li>
+        <li>
+          <a href="#contact">플리 마켓</a>
+        </li>
+        <li>
+          <a href="#contact">FAQ</a>
+        </li>
+      </ul>
+    </div>
+
+    <!--채팅 창-->
+    <div id="login-sidebar-wrapper">
+
+      <div style="margin-top:80px;"></div>
+      <div class="row" style="text-align:center; ">
+        <button type="button" class="btn btn-default" style="width:30%; height:80px; font-weight:bold">
+          <img src="p/3.png" alt="Chania" width="30" height="30">
+          <br> 1:1 메세지 </button>
+        <button type="button" class="btn btn-default" style="width:30%; height:80px; font-weight:bold">
+          <img src="p/3.png" alt="Chania" width="30" height="30">
+          <br> 요청자 모드 </button>
+        <button type="button" class="btn btn-default" style="width:30%; height:80px; font-weight:bold">
+          <img src="p/3.png" alt="Chania" width="30" height="30">
+          <br> 여행자 모드 </button>
+     </div>
+
+     <div class="row" id="m_list">
+       <ul class="list-group">
+         <li class="list-group-item" style="margin-top:10px; left:5%; width:90%">
+           <div style="position:relative; ">
+             <img src="p/2.jpg" alt="face" width="60px" height="60px" style="display:inline-block; position:relative; border-radius:60px; left:0px; top:-10px">
+
+             <div style="position:relative; display:inline-block; text-align:left; left:10px; top:10px"> 쿠리사마
+               <div style="display:inline-block"> (1) </div>
+               <div> 안녕하세요~직거래 언제 가능 하세요! </div>
+               <div> 오전 12:36 </div>
+             </div>
+
+             <img src="p/2.jpg" class="pull-right" alt="face" width="60px" height="60px" style="display:inline; position:relative; right:0px; top:10px">
+           </div>
+         </li>
+
+         <li class="list-group-item" style="margin-top:10px; left:5%; width:90%">
+           <div style="position:relative; ">
+             <img src="p/2.jpg" alt="face" width="60px" height="60px" style="display:inline-block; position:relative; border-radius:60px; left:0px; top:-10px">
+
+             <div style="position:relative; display:inline-block; text-align:left; left:10px; top:10px"> 쿠리사마
+               <div style="display:inline-block"> (1) </div>
+               <div> 안녕하세요~직거래 언제 가능 하세요! </div>
+               <div> 오전 12:36 </div>
+             </div>
+
+             <img src="p/2.jpg" class="pull-right" alt="face" width="60px" height="60px" style="display:inline; position:relative; right:0px; top:10px">
+           </div>
+         </li>
+
+         <li class="list-group-item" style="margin-top:10px; left:5%; width:90%">
+           <div style="position:relative; ">
+             <img src="p/2.jpg" alt="face" width="60px" height="60px" style="display:inline-block; position:relative; border-radius:60px; left:0px; top:-10px">
+
+             <div style="position:relative; display:inline-block; text-align:left; left:10px; top:10px"> 쿠리사마
+               <div style="display:inline-block"> (1) </div>
+               <div> 안녕하세요~직거래 언제 가능 하세요! </div>
+               <div> 오전 12:36 </div>
+             </div>
+
+             <img src="p/2.jpg" class="pull-right" alt="face" width="60px" height="60px" style="display:inline; position:relative; right:0px; top:10px">
+           </div>
+         </li>
+
+       </ul>
+     </div>
+
+
+    </div>
+    <!--//////채팅창 끝-->
 
     <div class="container-fluid">
       <!-- 상단 네비게이트 바 -->
@@ -82,60 +182,58 @@
 
 
 
-    <!-- 사이드 메뉴 -->
-    <div id="wrapper">
-    		<div class="overlay"></div>
-
-    		<!-- Sidebar -->
-				<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation" style="top:5%">
-						<ul class="nav sidebar-nav">
-								<li class="sidebar-brand">
-										<a href="#">
-											 Brand
-										</a>
-								</li>
-								<li>
-										<a href="#">요청 등록</a>
-								</li>
-								<li>
-										<a href="./travel_reg.html">여행 등록</a>
-								</li>
-								<li>
-										<a href="./travel_list.html">요청 리스트</a>
-								</li>
-								<li>
-										<a href="#">여행자 리스트</a>
-								</li>
-								<li>
-										<a href="#">이벤트</a>
-								</li>
-								<li>
-										<a href="#">플리마켓</a>
-								</li>
-								<li>
-										<a href="#">FAQ</a>
-								</li>
-						</ul>
-				</nav>
-    		<!-- /#sidebar-wrapper -->
-
         <!--main context-->
         <div class="reg_main">
 
           <div class="container" style="background-color:white; ">
             <br>
-            <p style="text-align:center; font-size:2rem; font-weight:bold; color:rgba(45, 159, 255, 1);"> 구매요청 등록 </p>
+            <p style="text-align:center; font-size:2rem; font-weight:bold; color:rgba(0, 174, 239, 1);"> 구매요청 등록 </p>
             <p style="text-align:center; font-size:1rem"> 여행자에게 부탁할 물품을 등록하고 저렴하게 겟하세요!</p>
 
+            <div class="hidden-xs" style="margin-top:60px"></div>
 
             <!-- 현재 상황 이미지 -->
-            <div class="row">
-              <div class="col-xs-3" style="color:white; font-size:20px; font-weight:bold; background-color:rgba(0, 174, 239, 1); height:190px; width:190px; border-radius:100px; text-align:center; vertical-align:middle; padding-top:45px ">
-                STEP 1<br>
-                상품 내용<br>
-                입력하기
+            <div class="row request_now_status_array" style="text-align:center;">
+              <div class="col-xs-3 ">
+                <div class="request_now_status" style="color:white; font-weight:bold; background-color:rgba(103, 104, 104, 1); border-radius:100px; text-align:center; ">
+                  STEP 1<br>
+                  상품 내용<br>
+                  입력하기
+                </div>
               </div>
+
+              <div class="col-xs-3 ">
+
+                <div class="request_now_status" style=" color:white; font-weight:bold; background-color:rgba(0, 174, 239, 1); border-radius:100px; text-align:center; ">
+                  STEP 2<br>
+                  만료일<br>
+                  설정하기<br>
+                </div>
+
+              </div>
+
+
+              <div class="col-xs-3 ">
+
+                <div class="request_now_status" style="color:white; font-weight:bold; background-color:rgba(0, 174, 239, 1); border-radius:100px; text-align:center; ">
+                  STEP 3<br>
+                  가격<br>
+                  제시하기
+                </div>
+              </div>
+
+              <div class="col-xs-3 ">
+
+                <div class="request_now_status" style="color:white; font-weight:bold; background-color:rgba(0, 174, 239, 1); border-radius:100px; text-align:center; ">
+                  STEP 4<br>
+                  여행자<br>
+                  선택하기
+                </div>
+              </div>
+
             </div>
+
+            <div class="hidden-xs" style="margin-top:60px"></div>
 
             <p class="header_jun">1. 상품 정보 입력</p>
 
@@ -187,12 +285,28 @@
                   <p class="header_jun"> 2. 만료일 설정</p>
 
                     <!-- 본인 인증란 -->
-                    <div class="">
+                    <div class="" style="">
                       <p class="reg_input" style="padding:10px; margin-left:10%"> 요청한 물품을 수령받고 싶은 기간을 설정해주세요.<br>
                       (국내 택배 사정에 따라 1~2일간 차이가 날 수 있습니다.)</p>
+
+                      <div class="form-group" style=" margin-left:10%; width:80%">
+                        <div class='input-group date' id='end_datetimepicker1'>
+                            <input type='text' class="form-control" placeholder="만료일"/>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                      </div>
+
                     </div>
 
                   </div>
+
+                  <script type="text/javascript">
+                      $(function () {
+                          $('#end_datetimepicker1').datetimepicker();
+                      });
+                  </script>
 
                   <div class="row">
 
@@ -210,18 +324,8 @@
                     <button type="button" class="btn btn_jun" style="margin-top:50px;" onclick="location.href='request2_reg.html'"> 다음 </button>
                   </div>
           </div>
-
-
-
-
-
         </div>
 
-
-
-
-
-  </div>
 
       <!--<script src="http://code.jquery.com/jquery.js"></script>
       <!-- 사용자 정의 js -->
@@ -229,7 +333,10 @@
       <script type="text/javascript" src="myjs.js"></script>
 
       <!-- the fileinput plugin initialization -->
+      <script type="text/javascript" src="./bower_components/moment/min/moment.min.js"></script>
+      <script type="text/javascript" src="./bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
       <script>
+
 
       $("#avatar-2").fileinput({
           overwriteInitial: false,
@@ -243,10 +350,11 @@
           removeTitle: 'Cancel or reset changes',
           elErrorContainer: '#kv-avatar-errors-2',
           msgErrorClass: 'alert alert-block alert-danger',
-          defaultPreviewContent: '<img src="1.jpg" alt="Your Avatar" style="width:100%; height:180px"><h6 class="text-muted">Click to select</h6>',
+          defaultPreviewContent: '<img src="p/1.jpg" alt="Your Avatar" style="width:100%; height:180px"><h6 class="text-muted">Click to select</h6>',
           layoutTemplates: {main2: '{preview} ' +  ' {remove}'},
           allowedFileExtensions: ["jpg", "png", "gif"]
       });
       </script>
+
   </body>
 </html>

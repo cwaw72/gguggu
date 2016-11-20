@@ -15,14 +15,108 @@
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
 
-      <link rel="stylesheet" type="text/css" href="mystyle.css">
-
+      <link rel="stylesheet" type="text/css" href="./css/mystyle.css">
+      <link rel="stylesheet" type="text/css" href="./css/login_form.css">
+      <link rel="stylesheet" type="text/css" href="./css/menu_side.css">
       <!--datetimepicker-->
       <link rel="stylesheet" href="./bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
 
   </head>
 
   <body>
+    <!--메뉴 창-->
+    <div id="menu-sidebar-wrapper">
+      <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"></a>
+      <div style="margin-top:80px;"></div>
+      <ul class="menu-sidebar-nav" style="margin-top:80px;">
+        <!--<li class="menu-sidebar-brand">
+          <a href="#">Project name</a>
+        </li>-->
+        <li>
+          <a href="./request_reg.html">요청 등록</a>
+        </li>
+        <li>
+          <a href="./travel_reg.html">여행 등록</a>
+        </li>
+        <li>
+          <a href="trabel_list">요청 리스트</a>
+        </li>
+        <li>
+          <a href="#contact">이벤트</a>
+        </li>
+        <li>
+          <a href="#contact">플리 마켓</a>
+        </li>
+        <li>
+          <a href="#contact">FAQ</a>
+        </li>
+      </ul>
+    </div>
+
+    <!--채팅 창-->
+    <div id="login-sidebar-wrapper">
+
+      <div style="margin-top:80px;"></div>
+      <div class="row" style="text-align:center; ">
+        <button type="button" class="btn btn-default" style="width:30%; height:80px; font-weight:bold">
+          <img src="p/3.png" alt="Chania" width="30" height="30">
+          <br> 1:1 메세지 </button>
+        <button type="button" class="btn btn-default" style="width:30%; height:80px; font-weight:bold">
+          <img src="p/3.png" alt="Chania" width="30" height="30">
+          <br> 요청자 모드 </button>
+        <button type="button" class="btn btn-default" style="width:30%; height:80px; font-weight:bold">
+          <img src="p/3.png" alt="Chania" width="30" height="30">
+          <br> 여행자 모드 </button>
+     </div>
+
+     <div class="row" id="m_list">
+       <ul class="list-group">
+         <li class="list-group-item" style="margin-top:10px; left:5%; width:90%">
+           <div style="position:relative; ">
+             <img src="p/2.jpg" alt="face" width="60px" height="60px" style="display:inline-block; position:relative; border-radius:60px; left:0px; top:-10px">
+
+             <div style="position:relative; display:inline-block; text-align:left; left:10px; top:10px"> 쿠리사마
+               <div style="display:inline-block"> (1) </div>
+               <div> 안녕하세요~직거래 언제 가능 하세요! </div>
+               <div> 오전 12:36 </div>
+             </div>
+
+             <img src="p/2.jpg" class="pull-right" alt="face" width="60px" height="60px" style="display:inline; position:relative; right:0px; top:10px">
+           </div>
+         </li>
+
+         <li class="list-group-item" style="margin-top:10px; left:5%; width:90%">
+           <div style="position:relative; ">
+             <img src="p/2.jpg" alt="face" width="60px" height="60px" style="display:inline-block; position:relative; border-radius:60px; left:0px; top:-10px">
+
+             <div style="position:relative; display:inline-block; text-align:left; left:10px; top:10px"> 쿠리사마
+               <div style="display:inline-block"> (1) </div>
+               <div> 안녕하세요~직거래 언제 가능 하세요! </div>
+               <div> 오전 12:36 </div>
+             </div>
+
+             <img src="p/2.jpg" class="pull-right" alt="face" width="60px" height="60px" style="display:inline; position:relative; right:0px; top:10px">
+           </div>
+         </li>
+
+         <li class="list-group-item" style="margin-top:10px; left:5%; width:90%">
+           <div style="position:relative; ">
+             <img src="p/2.jpg" alt="face" width="60px" height="60px" style="display:inline-block; position:relative; border-radius:60px; left:0px; top:-10px">
+
+             <div style="position:relative; display:inline-block; text-align:left; left:10px; top:10px"> 쿠리사마
+               <div style="display:inline-block"> (1) </div>
+               <div> 안녕하세요~직거래 언제 가능 하세요! </div>
+               <div> 오전 12:36 </div>
+             </div>
+
+             <img src="p/2.jpg" class="pull-right" alt="face" width="60px" height="60px" style="display:inline; position:relative; right:0px; top:10px">
+           </div>
+         </li>
+
+       </ul>
+     </div>
+   </div>
+
 
     <div class="container-fluid">
       <!-- 상단 네비게이트 바 -->
@@ -60,53 +154,6 @@
 
 
 
-    <!-- 사이드 메뉴 -->
-    <div id="wrapper">
-    		<div class="overlay"></div>
-
-    		<!-- Sidebar -->
-				<nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation" style="top:5%">
-						<ul class="nav sidebar-nav">
-								<li class="sidebar-brand">
-										<a href="#">
-											 Brand
-										</a>
-								</li>
-								<li>
-										<a href="#">요청 등록</a>
-								</li>
-								<li>
-										<a href="#">여행 등록</a>
-								</li>
-								<li>
-										<a href="#">요청 리스트</a>
-								</li>
-								<li>
-										<a href="#">여행자 리스트</a>
-								</li>
-								<!--<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
-									<ul class="dropdown-menu" role="menu">
-										<li class="dropdown-header">Dropdown heading</li>
-										<li><a href="#">Action</a></li>
-										<li><a href="#">Another action</a></li>
-										<li><a href="#">Something else here</a></li>
-										<li><a href="#">Separated link</a></li>
-										<li><a href="#">One more separated link</a></li>
-									</ul>
-								</li>-->
-								<li>
-										<a href="#">이벤트</a>
-								</li>
-								<li>
-										<a href="#">플리마켓</a>
-								</li>
-								<li>
-										<a href="#">FAQ</a>
-								</li>
-						</ul>
-				</nav>
-    		<!-- /#sidebar-wrapper -->
 
         <!--main context-->
         <div class="reg_main">
@@ -116,7 +163,7 @@
 
             <p class="header_jun">여행 정보 등록</p>
 
-            <div class="row panel-heading info_reg" style="border-radius:5px; background-color:rgba(45, 159, 255, 1); margin:30px">
+            <div class="row panel-heading info_reg" style="border-radius:5px; background-color:rgba(45, 159, 255, 1); margin-left:0px; margin-right:0px; ">
 
               <div class="col-xs-12 col-md-8">
 
@@ -346,11 +393,11 @@
               <button type="button" class="btn btn_jun" style="margin-top:50px;" > 다음 </button>
             </div>
           </div>
-
         </div>
 
-  </div>
       <script>
+
+
         var reg2_radio2 = document.getElementById("route_2");
 
         function route_1(){
@@ -379,20 +426,19 @@
       </script>
       <script type="text/javascript">
 
+        $(function () {
+            $('#datetimepicker6').datetimepicker();
+            $('#datetimepicker7').datetimepicker({
+                useCurrent: false //Important! See issue #1075
+            });
+            $("#datetimepicker6").on("dp.change", function (e) {
+                $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+            });
+            $("#datetimepicker7").on("dp.change", function (e) {
+                $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+            });
+        });
 
-
-          $(function () {
-              $('#datetimepicker6').datetimepicker();
-              $('#datetimepicker7').datetimepicker({
-                  useCurrent: false //Important! See issue #1075
-              });
-              $("#datetimepicker6").on("dp.change", function (e) {
-                  $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-              });
-              $("#datetimepicker7").on("dp.change", function (e) {
-                  $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-              });
-          });
       </script>
       <!--<script src="http://code.jquery.com/jquery.js"></script>
       <!-- 사용자 정의 js -->

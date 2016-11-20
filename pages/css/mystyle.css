@@ -1,0 +1,525 @@
+
+.text-center{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+/*-------------------------------*/
+/*            others             */
+/*-------------------------------*/
+
+.modal.modal-center {
+  text-align: center;
+}
+
+.modal-dialog.modal-center {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.header_jun{
+  color:rgba(0, 174, 239, 1);
+  margin-top:20px;
+  margin-left:6%;
+  font-size:25px;
+  font-weight: bold;
+}
+
+.main_jun{
+  width:80%;
+  margin-left:10%;
+}
+
+.header_jun_2{
+  color:black;
+  margin-top:20px;
+  margin-bottom:8px;
+  margin-left:30px;
+  font-size:20px;
+  font-weight: bold;
+}
+
+.btn_jun{
+  border-radius:5px;
+  font-weight: bold;
+  color: white;
+  width:120px;
+  height: 40px;
+  background-color:rgba(0, 174, 239, 1);
+}
+
+.ad_p{
+  width:40%;
+}
+
+.index_reg_btn_size{
+  width:160px;
+  height:38px
+}
+
+.bottom_margin{
+  margin-bottom:20px;
+}
+
+/* 부트스트랩 select 크기 조절  */
+.bootstrap-select>.dropdown-toggle{
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
+}
+
+.btn_select_active{
+  font-weight: bold;
+  color:white;
+  background-color:rgba(103, 104, 104, 1);
+}
+
+.btn_select_no_active{
+  font-weight: bold;
+  color:white;
+  background-color:rgba(204, 204, 204, 1);
+}
+
+.main_search{
+  background-color:white;
+  border-radius:0px;
+  font-weight:bold;
+  position:relative;
+  text-align:center;
+  vertical-align:middle;
+  display:inline-block;
+  height:100%;
+}
+
+.main_current{
+  background-size:170px 170px;
+  width:170px; height:170px;
+  background-repeat:no-repeat;
+  position:relative; top:-20px;
+  display:inline-block;
+  padding-top:40px;
+  margin-right:17px;
+  margin-left:17px;
+  margin-bottom:15px;
+
+  font-size:20px;
+  font-weight: bold;
+  color: white;
+}
+
+.do_active {
+   background-color:white;
+   pointer-events: none;
+   cursor: default;
+   font-weight: bold;
+}
+
+.not_active{
+  color:white;
+  font-weight: bold;
+  background-color:rgba(135, 206, 250, 1);
+}
+
+.reg_label label{
+  color:white;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.reg_label2 label{
+  color:black;
+  font-weight: bold;
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.reg_main{
+  background-color:rgba( 100, 100, 100, 0.2 );
+  padding-top:100px;
+  padding-bottom:80px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.reg_main_text{
+  margin:30px;
+  margin-left:50px
+}
+
+.reg_input_txt{
+  position: relative;
+  display: inline-block;
+  width: 50%  /* 원하는 너비 설정 */
+  height: auto;  /* 높이값 초기화 */
+  line-height : normal;  /* line-height 초기화 */
+  padding: .6em .12em; /* 원하는 여백 설정, 상하단 여백으로 높이를 조절 */
+  font-family: inherit;  /* 폰트 상속 */
+  border: 1px solid #999;
+  border-bottom: 2px solid #000000;
+  border-radius: 0;  /* iSO 둥근모서리 제거 */
+  outline-style: none;  /* 포커스시 발생하는 효과 제거를 원한다면 */
+  -webkit-appearance: none;  /* 브라우저별 기본 스타일링 제거 */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.index_search_bar3{
+  width:24%;
+}
+.index_search_bar2{
+  width:24%;
+}
+
+.request2_btn{
+  font-size:0.8rem;
+  height:60px;
+  width:30%;
+}
+
+/*큰 화면*/
+@media (min-width:768px){
+  .recommend_item_array{
+    margin-left:100px;
+    margin-right:100px;
+    margin-top:30px;
+  }
+  .form-inline.jun{
+    width:98%; height:65px;}
+
+
+  .main_search{
+    font-size:18px;
+  }
+
+
+
+  .reg_input{
+    font-weight: bold;
+    width:80%;
+  }
+  #etc_input{
+    display:inline-block;
+    position:relative;
+    width:170px}}
+
+
+  /*큰 화면 이하*/
+@media (max-width:767px){
+  .recommend_item_array{
+    margin-left:30px;
+    margin-right:30px;
+    margin-top:30px;
+  }
+  .form-inline.jun{
+    width:94%; height:35px;}
+  #reg_info{
+    margin-top:30px;}
+  .reg_input{
+    font-weight: bold;
+    width:80%;
+    margin-left: 10%;}
+  #etc_input{
+    margin-top: 10px;
+    margin-left: 5%;
+    width:80%;
+
+}}
+
+
+/* 4등분 */
+
+/* lg */
+@media (min-width:1200px){
+  html{font-size:28px;}
+  .index_search_bar{
+    width:26%
+  }
+  .index_icon{
+    width:25%;
+    height:25%;
+  }
+  .carousel_top{
+    top:40%
+  }
+  .modal_size{
+    width:450px;
+    height:600px
+  }
+
+  .request2_img{
+    margin-top:30px;
+    position:absolute;
+    top:9%;
+    left:9%;
+    width:180px;
+    height:180px;
+    margin-bottom: 10px;
+  }
+  .request2_sort_btn{
+     top:30px;
+  }
+  .request_now_status_array{
+    margin-top:50px;
+    margin-bottom:50px;
+    margin-left:40px;
+    margin-right:60px;
+    margin-left:60px;
+  }
+  .request_now_status{
+    font-size:19px;
+     height:160px;
+     width:160px;
+     padding-top:35px
+  }
+  .request2_img_background{
+    padding-left:160px;
+    padding-right:160px;
+
+    padding-top:0px;
+    margin:80px;
+    margin-top:15px;
+    padding-bottom:60px;
+
+  }
+}
+
+/* md */
+@media (min-width:993px) and (max-width:1199px){
+  html{font-size:26px;}
+  .index_search_bar{
+    width:24%
+  }
+  .index_icon{
+    width:25%;
+    height:25%;
+  }
+  .carousel_top{
+    top:40%
+  }
+  .modal_size{
+    width:450px;
+    height:600px
+  }
+  .request2_img{
+    margin-top:25px;
+    position:absolute;
+    top:8%;
+    left:8%;
+    width:160px;
+    height:160px;
+    margin-bottom: 10px;
+  }
+  .request2_sort_btn{
+     top:20px;
+  }
+  .request_now_status_array{
+    margin-top:40px;
+    margin-bottom:40px;
+    margin-left:10px;
+    margin-right:50px;
+    margin-left:50px;
+  }
+  .request_now_status{
+    font-size:16px;
+     height:140px;
+     width:140px;
+     padding-top:35px;
+  }
+  .request2_img_background{
+    padding-left:110px;
+    padding-right:110px;
+
+    padding-top:0px;
+    margin:80px;
+    margin-top:15px;
+    padding-bottom:60px;
+
+  }
+}
+
+/* sm */
+@media (min-width:769px) and (max-width:992px){
+  html{font-size:22px;}
+  .request2_sort_btn{
+     top:10px;
+  }
+  .request2_btn{
+    font-size:0.8rem;
+    height:40px;
+    width:40%;
+  }
+  .ad_p{
+    height:35px;
+    width:40%;
+  }
+  .index_search_bar3{
+    width:23%;
+  }
+  .index_search_bar2{
+    width:10%;
+  }
+  .index_search_bar{
+    width:20%;
+  }
+  .index_icon{
+    width:35%;
+    height:35%;
+  }
+  .carousel_indicators_top{
+    top:90%;
+    left:80%;
+  }
+  .carousel_top{
+    top:40%
+  }
+  .modal_size{
+    width:420px;
+    height:600px
+  }
+  .request2_img{
+    margin-top:20px;
+    position:absolute;
+    top:8%;
+    left:8%;
+    width:140px;
+    height:140px;
+    margin-bottom: 5px;
+  }
+
+  .request_now_status_array{
+    margin-top:30px;
+    margin-bottom:30px;
+    margin-left:10px;
+    margin-right:40px;
+    margin-left:40px;
+  }
+  .request_now_status{
+    font-size:14px;
+     height:110px;
+     width:110px;
+     padding-top:25px
+  }
+  .request2_img_background{
+    padding-left:80px;
+    padding-right:80px;
+
+    padding-top:0px;
+    margin:40px;
+    margin-top:15px;
+    padding-bottom:40px;
+
+  }
+}
+
+/* xs */
+@media (max-width:768px){
+
+  .main_jun{
+    width:80%;
+    margin-left:0%;
+  }
+  .header_jun{
+    color:rgba(0, 174, 239, 1);
+    margin-top:20px;
+    margin-left:0px;
+    font-size:25px;
+    font-weight: bold;
+  }
+  .reg_main{
+    background-color:rgba( 100, 100, 100, 0.2 );
+    padding-top:60px;
+    padding-bottom:40px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  html{font-size:18px;}
+  .request2_btn{
+    font-size:0.8rem;
+    height:40px;
+    width:80%;
+  }
+  .ad_p{
+    height:30px;
+    width:60%;
+  }
+  .index_reg_btn_size{
+    width:120px;
+    height:30px
+  }
+  .index_search_bar3{
+    width:30%
+  }
+  .index_search_bar2{
+    width:70%
+  }
+  .index_search_bar{
+    width:50%
+  }
+  .index_icon{
+    width:40%;
+    height:40%;
+  }
+  .carousel_indicators_top{
+    top:80%;
+    left:78%;
+  }
+  .carousel_top{
+    top:30%
+  }
+  .modal_size{
+    width:100%;
+    height:600px
+  }
+  .request2_img{
+    margin-top:5px;
+    position:absolute;
+    top:8%;
+    left:8%;
+    width:90px;
+    height:90px;
+    margin-bottom: 5px;
+  }
+  .request_now_status_array{
+    margin-top:25px;
+    margin-bottom:25px;
+  }
+  .request_now_status{
+    font-size:9px;
+     height:60px;
+     width:60px;
+     padding-top:10px
+  }
+  .request2_img_background{
+    padding-left:3%;
+    padding-right:3%;
+
+    padding-top:0px;
+    margin:0px;
+    margin-top:15px;
+    padding-bottom:20px;
+
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .modal.modal-center:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+  .modal.modal-center.btn{
+    width: 100px;
+  }
+}
+
+/* 메인 색 파랑 (0, 159, 255, 1)
+    00aeef   (0, 174, 239, 1)
+   메인 색 노란 255, 186, 00
+   cccccc    (204, 204, 204, 1)
+   진한회색    (103, 104, 104, 1)
+  opacity*/
